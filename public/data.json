@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "title": "Yoga Basics",
+      "image": "yoga_basics.jpg",
+      "description": "Learn the fundamental yoga poses and techniques to build a strong foundation for your practice."
+    },
+    {
+      "id": 2,
+      "title": "High-Intensity Interval Training",
+      "image": "hiit.jpg",
+      "description": "Experience a dynamic workout with intense bursts of activity followed by short rest periods, boosting your metabolism."
+    },
+    {
+      "id": 3,
+      "title": "Nutrition Essentials",
+      "image": "nutrition.jpg",
+      "description": "Discover the key principles of a balanced diet and how to make healthy food choices to support your fitness goals."
+    },
+    {
+      "id": 4,
+      "title": "Cardio Kickboxing",
+      "image": "kickboxing.jpg",
+      "description": "Join our energetic cardio kickboxing classes to improve cardiovascular health and build strength through dynamic movements."
+    },
+    {
+      "id": 5,
+      "title": "Mindful Meditation",
+      "image": "meditation.jpg",
+      "description": "Explore mindfulness and meditation techniques to reduce stress, improve focus, and enhance overall well-being."
+    },
+    {
+      "id": 6,
+      "title": "Functional Fitness",
+      "image": "functional_fitness.jpg",
+      "description": "Engage in exercises that mimic real-life movements to improve everyday activities, enhance flexibility, and prevent injury."
+    }
+  ]
+  
