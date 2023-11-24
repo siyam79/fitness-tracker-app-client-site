@@ -1,5 +1,7 @@
 // import banner from '../../assets/img/valery-sysoev-LDAirERNzew-unsplash.jpg'
 
+import { Link } from "react-router-dom";
+import { BiChevronsDown  } from "react-icons/bi";
 const Banner = () => {
     return (
         <div className="">
@@ -10,7 +12,11 @@ const Banner = () => {
                         <h1 className="mb-5 text-5xl font-bold">BE YOUR
                          <br />BEST SELF</h1>
                         <p className="mb-5">The BeZu fitness studios combine the latest fitness classes and technology in one very exclusive, premium space and juxtaposes them with high energy workouts, high tech LPG Endermologie®, fitness scanning and body sculpting therapies for the ultimate mental and physical balance..</p>
-                        <button className="btn btn-primary">Get Started</button>
+                      <div className="text-center ">
+                      <Link to='/classes'> <button className=" bg-cyan-600 text-white px-4 py-2 font-bold rounded-md  ">Get Started  <BiChevronsDown  className="ml-6 text-4xl "/> </button>
+                      </Link>
+                     
+                      </div>
                     </div>
                 </div>
             </div>

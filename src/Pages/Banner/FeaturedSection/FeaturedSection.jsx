@@ -19,10 +19,10 @@ const FeaturedSection = () => {
     return (
         <div>
             <div>
-                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4 ">
+                <div className=" w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4 ">
                     {
                         featuredData?.map(item => <div key={item.id}>
-                            <div className="card w-96 bg-base-100 h-[350px]  ">
+                            <div className="card w-80 mx-auto bg-base-100 h-[350px]  ">
                                 <figure><img className="w-full h-[250px]  " src={item.image} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">

@@ -12,7 +12,7 @@ const About = () => {
                 </div>
 
                 <div className="flex flex-col h-full justify-center ">
-                    <h1 className="text-4xl font-bold truncate">Personal Training, Advice & Support</h1>
+                    <h1 className="text-2xl font-bold ">Personal Training, Advice & Support</h1>
                     <p className="text-lg font-medium py-4 ">Personal service is key to everything we do. Our award-winning PT coaches offer a range of bespoke training packages to help achieve your individual fitness goals.</p>
                     <div>
                     <button className="text-xl font-bold bg-cyan-600 px-4 py-2 text-white rounded-sm ">Read Now</button>
