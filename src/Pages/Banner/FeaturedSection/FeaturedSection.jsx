@@ -20,21 +20,18 @@ const FeaturedSection = () => {
         <div>
             <div>
                 <h1> data {featuredData.length} </h1>
-                <div>
+                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-stone-300  ">
                     {
                         featuredData?.map(item => <div key={item.id}>
-                            <div className="card w-96 bg-base-100 shadow-xl">
-                                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                            <div className="card w-96 bg-base-100 h-[350px]  ">
+                                <figure><img className="w-full h-[250px] " src={item.image} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">
-                                        Shoes!
+                                       {item.title}
                                         <div className="badge badge-secondary">NEW</div>
                                     </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div className="card-actions justify-end">
-                                        <div className="badge badge-outline">Fashion</div>
-                                        <div className="badge badge-outline">Products</div>
-                                    </div>
+                                    {/* <p>{item.description}</p> */}
+                                    
                                 </div>
                             </div>
                         </div>)

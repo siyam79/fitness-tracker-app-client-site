@@ -1,39 +1,39 @@
 [
     {
       "id": 1,
-      "title": "Yoga Basics",
-      "image": "yoga_basics.jpg",
-      "description": "Learn the fundamental yoga poses and techniques to build a strong foundation for your practice."
+      "title": "Personal Training",
+      "image": "https://i.ibb.co/nkpK9Q3/banner.jpg",
+      "description": "Personal service is key to everything we do. Our award-winning PT coaches offer a range of bespoke training packages to help achieve your individual fitness goals."
     },
     {
       "id": 2,
-      "title": "High-Intensity Interval Training",
-      "image": "hiit.jpg",
-      "description": "Experience a dynamic workout with intense bursts of activity followed by short rest periods, boosting your metabolism."
+      "title": "Classes & Sessions",
+      "image": "https://i.ibb.co/qxjbFZY/jonathan-borba-Vt-Ca-DJ-Wf-OA-unsplash.jpg",
+      "description": "We always endeavour to provide you access to the latest and most cutting-edge classes, sessions, Detailed information about each class can be located under the “Classes” section."
     },
     {
       "id": 3,
-      "title": "Nutrition Essentials",
-      "image": "nutrition.jpg",
-      "description": "Discover the key principles of a balanced diet and how to make healthy food choices to support your fitness goals."
+      "title": "Barre Studio ",
+      "image": "https://i.ibb.co/jZvn6cG/jonathan-chng-Hgo-Kvt-Kpy-HA-unsplash.jpg",
+      "description": "Our small group fitness memberships offers a tailored and supportive workout experience in a close-knit community setting. With a limited number of participants"
     },
     {
       "id": 4,
-      "title": "Cardio Kickboxing",
-      "image": "kickboxing.jpg",
-      "description": "Join our energetic cardio kickboxing classes to improve cardiovascular health and build strength through dynamic movements."
+      "title": "LPG Endermologie",
+      "image": "https://i.ibb.co/b7P5BGn/scott-webb-xw-Ml-VSq-P20-U-unsplash.jpg",
+      "description": "In contrast to a lot of the techniques available on the market, LPG® endermologie offers a 100% natural alternative:"
     },
     {
       "id": 5,
-      "title": "Mindful Meditation",
-      "image": "meditation.jpg",
-      "description": "Explore mindfulness and meditation techniques to reduce stress, improve focus, and enhance overall well-being."
+      "title": "HydraFacial",
+      "image": "https://i.ibb.co/C5k9w00/john-arano-h4i9-G-de7-Po-unsplash.jpg",
+      "description": "HydraFacial uses patented technology to cleanse, extract, and hydrate. HydraFacial super serums are create an instantly gratifying glow"
     },
     {
       "id": 6,
-      "title": "Functional Fitness",
-      "image": "functional_fitness.jpg",
-      "description": "Engage in exercises that mimic real-life movements to improve everyday activities, enhance flexibility, and prevent injury."
+      "title": "Beauty & Massages",
+      "image": "https://i.ibb.co/h7pDQJw/engin-akyurt-SMw-CQZWayj0-unsplash.jpg",
+      "description": "Here at BeZu, we cater for all your beauty needs. Providing you with a head to toe service including facials, waxing, nails, massage and more."
     }
   ]
   
