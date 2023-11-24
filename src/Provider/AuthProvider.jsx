@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { auth } from "../Config/firebase.config";
 
-export const AuthContext = createContext({})
+export const AuthContext = createContext(null)
 
 
 const AuthProvider = ({ children }) => {

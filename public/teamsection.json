@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Class 1",
+        "image": "https://i.ibb.co/n62y24Z/alonso-reyes-0-Hl-I76m4jx-U-unsplash.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Class 2",
+        "image": "https://i.ibb.co/2nJN2sj/victor-freitas-Btl6-ZNd-Ifd-Q-unsplash.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Class 3",
+        "image": "https://i.ibb.co/3pQ7SjH/anastase-maragos-7k-Ep-UPB8v-Nk-unsplash.jpg"
+    }
+]

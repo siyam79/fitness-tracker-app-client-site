@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Alice Johnson",
+        "stories": "Using this platform has transformed my fitness journey. I've lost 20 pounds and gained so much confidence!",
+        "image": "https://i.postimg.cc/T3FfQws6/success-1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Sophia Clark",
+        "stories": "I never enjoyed exercising until I joined this platform. It's fun and effective!",
+        "image": "https://i.postimg.cc/nrFJMQXv/success-5.jpg"
+    },
+    
+    {
+        "id": 3,
+        "name": "Emily Davis",
+        "stories": "I love the variety of classes available. It keeps me motivated and engaged in my workouts!",
+        "image": "https://i.postimg.cc/Wb4VvgLV/success-3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "John Parker",
+        "stories": "This platform helped me achieve my fitness goals faster than I ever imagined. I feel healthier and stronger!",
+        "image": "https://i.postimg.cc/GtX1DhD6/success-4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Bob Smith",
+        "stories": "Thanks to this platform, I've managed to run my first marathon. The training plans were invaluable!",
+        "image": "https://i.postimg.cc/sX9zVJgj/success-2.jpg"
+    },
+    
+    {
+        "id": 6,
+        "name": "David Wilson",
+        "stories": "Great platform! I feel more energetic and productive throughout the day after starting my workouts here.",
+        "image": "https://i.postimg.cc/4dTZk0Z2/success-6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Elena Garcia",
+        "stories": "I've improved my overall well-being and mental clarity. This platform has been life-changing!",
+        "image": "https://i.postimg.cc/9Xb2K1k1/success-7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Michael Lee",
+        "stories": "I highly recommend this platform to anyone looking for a convenient and effective way to stay fit!",
+        "image": "https://i.postimg.cc/Fsn4szNL/success-8.jpg"
+    }
+]

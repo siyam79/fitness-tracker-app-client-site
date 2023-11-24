@@ -8,6 +8,8 @@ import Login from "../Components/Login/Login";
 import Register from "../Components/Login/Register";
 import Community from "../Components/Community/Community";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+// import NewsLetter from "../Pages/NewsLetter/NewsLetter";
+// import PrivateRoute from "../Provider/PrivateRoute";
 
 const Route = createBrowserRouter([
     {
@@ -36,8 +38,8 @@ const Route = createBrowserRouter([
                 element :<Community></Community>
             },
             // {
-            //     path:'/community',
-            //     element :
+            //     path:'/newsLetter',
+            //     element :<NewsLetter></NewsLetter>
             // },
             {
                 path:'/login',
