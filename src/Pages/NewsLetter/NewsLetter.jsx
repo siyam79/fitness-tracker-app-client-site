@@ -47,10 +47,10 @@ const NewsLetter = () => {
     }, []);
     return (
         <section id="contact" className=" py-4 px-3 ">
-            <div className=" text-center flex items-center justify-center gap-5  ">
+            <div className=" text-center lg:flex items-center justify-center gap-5  ">
                 {/* <h3 className="text-2xl font-semibold"> News Letter <span className=" text-pink-600">Me</span>  </h3> */}
                 {/* <p className="text-pink-600 mt-3 text-lg ">Get In Touch</p> */}
-                <div className="  flex md:flex-row flex-col gap-6 mx-w-5xl bg-slate-900   md:p-6 p-2 w-1/2  rounded-lg h-[400px] ">
+                <div className="  flex md:flex-row flex-col gap-6 mx-w-5xl bg-slate-900   md:p-6 p-2 lg:w-1/2 rounded-lg h-[400px] ">
                     <form onSubmit={handleNewsLetter} className=" flex flex-col flex-1 gap-5 ">
 
                         <input className='px-4' type="text" name="name" id="" required placeholder="Your Name" />
@@ -65,7 +65,7 @@ const NewsLetter = () => {
 
 
                 </div>
-                <div className='w-1/2  '>
+                <div className='lg:w-1/2  w-full mt-2 '>
                     <img className='w-full h-full ' src="https://petapixel.com/assets/uploads/2023/04/facebook-contact-support-featured.jpg" alt="" />
                 </div>
             </div>

@@ -6,7 +6,11 @@ const TrainerDetails = () => {
     console.log(data);
     return (
         <div>
-            
+            <div>
+        
+                <h1> {data.trainerName} </h1>
+                <p>{data.availableTimeSlot[0]} </p>
+            </div>
         </div>
     );
 };
