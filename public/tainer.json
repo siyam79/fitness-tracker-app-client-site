@@ -1,0 +1,93 @@
+[
+    {
+      "trainerName": "John Doe",
+      "profileImage": "https://example.com/john_doe_profile.jpg",
+      "experience": "Certified Personal Trainer with 10 years of experience in fitness and nutrition.",
+      "socialIcons": {
+        "facebook": "https://www.facebook.com/johndoe",
+        "twitter": "https://twitter.com/johndoe",
+        "instagram": "https://www.instagram.com/johndoe"
+      },
+      "availableTimeSlot": [
+        "Monday 8:00 AM - 12:00 PM",
+        "Wednesday 2:00 PM - 5:00 PM",
+        "Friday 10:00 AM - 1:00 PM"
+      ]
+    },
+    {
+      "trainerName": "Jane Smith",
+      "profileImage": "https://example.com/jane_smith_profile.jpg",
+      "experience": "Fitness enthusiast and trainer specializing in high-intensity interval training (HIIT).",
+      "socialIcons": {
+        "facebook": "https://www.facebook.com/janesmith",
+        "twitter": "https://twitter.com/janesmith",
+        "instagram": "https://www.instagram.com/janesmith"
+      },
+      "availableTimeSlot": [
+        "Tuesday 9:00 AM - 11:00 AM",
+        "Thursday 4:00 PM - 7:00 PM",
+        "Saturday 1:00 PM - 3:00 PM"
+      ]
+    },
+    {
+      "trainerName": "Alex Johnson",
+      "profileImage": "https://example.com/alex_johnson_profile.jpg",
+      "experience": "Former athlete turned personal trainer, passionate about helping clients achieve their fitness goals.",
+      "socialIcons": {
+        "facebook": "https://www.facebook.com/alexjohnson",
+        "twitter": "https://twitter.com/alexjohnson",
+        "instagram": "https://www.instagram.com/alexjohnson"
+      },
+      "availableTimeSlot": [
+        "Monday 3:00 PM - 6:00 PM",
+        "Wednesday 10:00 AM - 1:00 PM",
+        "Friday 5:00 PM - 8:00 PM"
+      ]
+    },
+    {
+      "trainerName": "Emily Davis",
+      "profileImage": "https://example.com/emily_davis_profile.jpg",
+      "experience": "Yoga instructor with a focus on mindfulness and holistic wellness.",
+      "socialIcons": {
+        "facebook": "https://www.facebook.com/emilydavis",
+        "twitter": "https://twitter.com/emilydavis",
+        "instagram": "https://www.instagram.com/emilydavis"
+      },
+      "availableTimeSlot": [
+        "Tuesday 1:00 PM - 4:00 PM",
+        "Thursday 9:00 AM - 12:00 PM",
+        "Saturday 3:00 PM - 6:00 PM"
+      ]
+    },
+    {
+      "trainerName": "Mark Taylor",
+      "profileImage": "https://example.com/mark_taylor_profile.jpg",
+      "experience": "Certified nutritionist and fitness trainer dedicated to promoting a healthy lifestyle.",
+      "socialIcons": {
+        "facebook": "https://www.facebook.com/marktaylor",
+        "twitter": "https://twitter.com/marktaylor",
+        "instagram": "https://www.instagram.com/marktaylor"
+      },
+      "availableTimeSlot": [
+        "Monday 1:00 PM - 4:00 PM",
+        "Wednesday 5:00 PM - 8:00 PM",
+        "Friday 9:00 AM - 12:00 PM"
+      ]
+    },
+    {
+      "trainerName": "Sarah Brown",
+      "profileImage": "https://example.com/sarah_brown_profile.jpg",
+      "experience": "Specializing in weightlifting and strength training, helping clients build both physical and mental strength.",
+      "socialIcons": {
+        "facebook": "https://www.facebook.com/sarahbrown",
+        "twitter": "https://twitter.com/sarahbrown",
+        "instagram": "https://www.instagram.com/sarahbrown"
+      },
+      "availableTimeSlot": [
+        "Tuesday 4:00 PM - 7:00 PM",
+        "Thursday 2:00 PM - 5:00 PM",
+        "Saturday 10:00 AM - 1:00 PM"
+      ]
+    }
+  ]
+  

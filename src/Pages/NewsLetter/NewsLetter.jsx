@@ -1,6 +1,7 @@
 
 import { useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+// import useAuth from '../../Hooks/useAuth';
 
 
 const NewsLetter = () => {
@@ -35,7 +36,7 @@ const NewsLetter = () => {
                     toast.success(" News Letter Collection Success Full ", {
                         position: "top-center"
                     })
-                   
+                   form.reset()
                 }
 
             })

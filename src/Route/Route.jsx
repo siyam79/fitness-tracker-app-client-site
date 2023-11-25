@@ -8,6 +8,12 @@ import Login from "../Components/Login/Login";
 import Register from "../Components/Login/Register";
 import Community from "../Components/Community/Community";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import BeATainer from "../Pages/BeATrainer/BeATainer";
+import TrainerDetails from "../Components/Trainer/TrainerDetails";
+import Dashboard from "../Pages/MainLayOute/Dashboard";
+import AllSubscibers from "../Pages/Dashboard/AllSubscribers/AllSubscibers";
+import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
+import AppliedTrainer from "../Pages/Dashboard/AppliedTrainer/AppliedTrainer";
 // import NewsLetter from "../Pages/NewsLetter/NewsLetter";
 // import PrivateRoute from "../Provider/PrivateRoute";
 
@@ -37,10 +43,15 @@ const Route = createBrowserRouter([
                 path:'/community',
                 element :<Community></Community>
             },
-            // {
-            //     path:'/newsLetter',
-            //     element :<NewsLetter></NewsLetter>
-            // },
+            {
+                path:'/trainer/:id',
+                element : <TrainerDetails></TrainerDetails>,
+                loader : ({params})=> fetch(`http://localhost:5000/trainers/${params.id}`)
+            },
+            {
+                path:'/beATainer',
+                element :<BeATainer></BeATainer>
+            },
             {
                 path:'/login',
                 element :<Login></Login>
@@ -50,7 +61,26 @@ const Route = createBrowserRouter([
                 element :<Register></Register>
             },
         ]
+    },
+    {
+        path:'dashboard',
+        element:<Dashboard></Dashboard>,
+        children:[
+            {
+                path:'allSubscribers',
+                element:<AllSubscibers></AllSubscibers>
+            },
+            {
+                path:'allTrainers',
+                element:<AllTrainers></AllTrainers>
+            },
+            {
+                path:'appliedTrainers',
+                element:<AppliedTrainer></AppliedTrainer>
+            }
+        ]
     }
+
 ])
    
 

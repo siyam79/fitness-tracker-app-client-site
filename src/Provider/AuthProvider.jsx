@@ -97,7 +97,7 @@ const AuthProvider = ({ children }) => {
 };
 
 AuthProvider.propTypes = {
-    children: PropTypes
+    children: PropTypes.object
 }
 
 

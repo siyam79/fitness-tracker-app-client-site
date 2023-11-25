@@ -3,14 +3,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { Link, useNavigate } from "react-router-dom";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 import useAuth from '../../Hooks/useAuth';
 import SocialLogin from "./SocialLogin";
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
 
 const Register = () => {
-
-    const { createUser , handleUpdateProfile } = useAuth()
+    const axiosPublic = useAxiosPublic()
+    const { createUser, handleUpdateProfile } = useAuth()
     const navigate = useNavigate()
 
     const [showPassword, setShowPassWord] = useState(false)
@@ -23,28 +24,37 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const img = form.img.value;
-        console.log(email, password, img , name);
+        console.log(email, password, img, name);
+
+        const userInfo = {
+            name,
+            email
+        }
+
+        //     if (!/(?=.*?[A-Z])(?=.*?[#?!@$%^&*-]).{6,}/.test(password)) {
+        //         toast.error('please Your passwor capital letter special character and 6 characters ');
+        //         return;
+        //     }
 
 
-    //     if (!/(?=.*?[A-Z])(?=.*?[#?!@$%^&*-]).{6,}/.test(password)) {
-    //         toast.error('please Your passwor capital letter special character and 6 characters ');
-    //         return;
-    //     }
-
-
-    createUser(email, password)
+        createUser(email, password)
             .then(res => {
                 console.log(res);
                 toast.success('create account ')
                 handleUpdateProfile(name, img)
                     .then(() => {
-                        toast.success('User created successfully', {
-                            position: 'top-center'
 
-                        })
-                        // window.location.reload()
-                        navigate('/')
+                        axiosPublic.post("/users", userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    toast.success('User created successfully', {
+                                        position: 'top-center'
 
+                                    })
+                                    // window.location.reload()
+                                    navigate('/')
+                                }
+                            })
                     })
 
             })
@@ -53,15 +63,15 @@ const Register = () => {
                 toast.error('please cheack your email or password ')
             })
 
-    // }
+        // }
     }
-    // useEffect(() => {
-    //     document.title = " Job Search | Register";
-    // }, []);
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Register";
+    }, []);
     return (
         <div className=" relative md:w-[28rem]  mx-auto p-2  rounded-lg shadow-2xl mt-1 h-full  ">
             <h1 className="text-3xl text-center text-pink-600 font-bold  mt-4 "> Register Now  </h1>
-            <form  onSubmit={handleRegister}>
+            <form onSubmit={handleRegister}>
                 <div className="mb-4 mt-10 ">
                     <label className="block  text-md font-semibold mb-2 " htmlFor=""> Your Name </label>
                     <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder="Your Name" name="name" required />

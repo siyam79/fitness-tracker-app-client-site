@@ -48,7 +48,7 @@ const NabBar = () => {
 
         {user && (
             <li className="mx-2 font-medium"><NavLink
-                to="/dashboard."
+                to="/dashboard"
                 className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""}> Dashboard.</NavLink></li>
         )}
