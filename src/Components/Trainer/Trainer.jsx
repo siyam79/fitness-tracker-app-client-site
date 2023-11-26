@@ -1,6 +1,6 @@
 // import { useQuery } from "@tanstack/react-query";
 // import useAxiosPublic from "../../Hooks/useAxiosPublic";
-
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import useTrainers from "../../Hooks/useTrainers";
 
@@ -21,13 +21,18 @@ const Trainer = () => {
                 {
                     trainer.map(item => <div key={item._id}>
                         <div className="card w-80 mx-auto bg-base-100 h-[350px]  shadow-xl">
-                            <figure><img src={item.profileImage} alt="Shoes" /></figure>
+                            <figure><img className="  w-full  " src={item.profileImage} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">
                                     {item.trainerName}
                                     <div className="badge badge-secondary">NEW</div>
                                 </h2>
-                                <p>{item.experience}</p>
+                                <div className=" flex items-center justify-center gap-6 text-2xl ">
+                                <Link><FaFacebook> </FaFacebook></Link>
+                                <FaInstagram></FaInstagram>
+                                <FaLinkedin></FaLinkedin>
+                                </div>
+                              
                                 <div className="card-actions justify-center">
                                    <Link to={`/trainer/${item._id}`}> <div className="font-bold text-gray-600 hover:text-green-500 text-xl badge badge-outline px-6  py-4  ">Know More</div></Link>
                                 </div>

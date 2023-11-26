@@ -14,6 +14,8 @@ import Dashboard from "../Pages/MainLayOute/Dashboard";
 import AllSubscibers from "../Pages/Dashboard/AllSubscribers/AllSubscibers";
 import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 import AppliedTrainer from "../Pages/Dashboard/AppliedTrainer/AppliedTrainer";
+// import ClassDetails from "../Components/Classes/ClassDetails";
+// import Member from "../Pages/Member/Member";
 // import NewsLetter from "../Pages/NewsLetter/NewsLetter";
 // import PrivateRoute from "../Provider/PrivateRoute";
 
@@ -37,8 +39,16 @@ const Route = createBrowserRouter([
             },
             {
                 path:'/classes',
-                element :<Classes></Classes>
+                element :<Classes></Classes>,
+                // loader : ({params})=> fetch(`http://localhost:5000/class/${params.id}`)
             },
+            
+            // {
+            //     path:'/class/:id',
+            //     element :<ClassDetails></ClassDetails>,
+            //     loader : ({params})=> fetch(`http://localhost:5000/class/${params.id}`)
+            // },
+
             {
                 path:'/community',
                 element :<Community></Community>
@@ -52,6 +62,11 @@ const Route = createBrowserRouter([
                 path:'/beATainer',
                 element :<BeATainer></BeATainer>
             },
+            // {
+            //     path:'/member/:id',
+            //     element :<Member></Member>,
+            //     loader : ({params})=> fetch(`http://localhost:5000/trainers/${params.id}`)
+            // },
             {
                 path:'/login',
                 element :<Login></Login>

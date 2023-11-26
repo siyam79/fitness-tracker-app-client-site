@@ -54,7 +54,7 @@ const Gallery = () => {
             <div className="relative h-screen flex items-center justify-center" style={containerStyle}>
                 <div className="absolute inset-0 bg-black opacity-25 rounded-xl"></div>
                 <div className="relative z-10 text-white text-center">
-                    <h1 className="text-4xl font-bold uppercase text-center">Fitness Center || Gallery</h1>
+                    <h1 className="lg:text-4xl font-bold uppercase text-center">Fitness Center || Gallery</h1>
                 </div>
             </div>
             <InfiniteScroll
@@ -62,9 +62,9 @@ const Gallery = () => {
                 next={fetchData}
                 hasMore={gallery.length < totalData}
                 loader={<span className="loading loading-spinner loading-lg"></span>}
-                endMessage={<p className="text-center text-2xl text-pink-500 font-bold mt-5"><b>You have loaded all data</b></p>}
+                endMessage={<p className="text-center text-2xl text-pink-500 font-bold mt-5"><span className="loading loading-spinner text-error"></span></p>}
             >
-                <div className="grid grid-cols-4 gap-5 mt-8">
+                <div className="grid lg:grid-cols-4 grid-cols-1 - gap-5 mt-8">
                     {gallery.map((galleries, index) => (
                         <div key={galleries._id || index} className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md">
                             <img className="h-64 w-96 object-cover" src={galleries.image} alt="Card" />

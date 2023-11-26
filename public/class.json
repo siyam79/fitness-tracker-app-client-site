@@ -1,0 +1,56 @@
+[
+  {
+    "goal": "Lose Weight",
+    "className": "lose-weight",
+    "details": "Aiming to shed excess body fat through a combination of calorie control and increased physical activity.",
+    "image": "https://i.postimg.cc/T3FfQws6/success-1.jpg"
+  },
+  {
+    "goal": "Build Muscle",
+    "className": "build-muscle",
+    "details": "Focusing on strength training exercises to increase muscle mass and enhance overall body strength.",
+    "image": "https://i.postimg.cc/nrFJMQXv/success-5.jpg"
+  },
+  {
+    "goal": "Cardio",
+    "className": "cardio",
+    "details": "Engaging in cardiovascular exercises to improve heart health, endurance, and burn calories.",
+    "image": "https://i.postimg.cc/Wb4VvgLV/success-3.jpg"
+  },
+  {
+    "goal": "Stretching",
+    "className": "stretching",
+    "details": "Incorporating stretching routines to enhance flexibility, prevent injuries, and improve overall mobility.",
+    "image": "https://i.postimg.cc/GtX1DhD6/success-4.jpg"
+  },
+  {
+    "goal": "Yoga",
+    "className": "yoga",
+    "details": "Practicing yoga poses and breathing exercises for physical, mental, and spiritual well-being.",
+    "image": "https://i.postimg.cc/sX9zVJgj/success-2.jpg"
+  },
+  {
+    "goal": "Pilates",
+    "className": "pilates",
+    "details": "Participating in Pilates workouts to strengthen the core, improve posture, and enhance overall body flexibility.",
+    "image": "https://i.postimg.cc/9Xb2K1k1/success-7.jpg"
+  },
+  {
+    "goal": "Sports",
+    "className": "sports",
+    "details": "Engaging in specific sports activities to improve overall fitness, agility, and skill in a chosen sport.",
+    "image": "https://i.postimg.cc/Fsn4szNL/success-8.jpg"
+  },
+  {
+    "goal": "Increase Flexibility",
+    "className": "flexibility",
+    "details": "Focusing on exercises and stretches aimed at increasing joint flexibility and range of motion.",
+    "image": "https://i.postimg.cc/QCKpbYbQ/runner-on-competition-and-future-success-male-running-on-arena-track-trainer.jpg"
+  },
+  {
+    "goal": "Improve Endurance",
+    "className": "endurance",
+    "details": "Training to enhance cardiovascular endurance and stamina for prolonged physical activities.",
+    "image": "https://i.postimg.cc/QCKpbYbQ/runner-on-competition-and-future-success-male-running-on-arena-track-trainer.jpg"
+  }
+]

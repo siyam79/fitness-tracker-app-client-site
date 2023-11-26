@@ -152,7 +152,7 @@ const BeATainer = () => {
                             " type="number" placeholder=" Your Age " name="age" required />
 
                             </div>
-                            <input name="photo" type="file" className="file-input file-input-bordered w-full max-w-xs" />
+                            {/* <input name="photo" type="file" className="file-input file-input-bordered w-full max-w-xs" /> */}
                         </div>
 
 
