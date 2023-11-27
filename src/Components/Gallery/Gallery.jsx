@@ -2,7 +2,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const LIMIT = 5;
 
 const Gallery = () => {
@@ -49,6 +50,15 @@ const Gallery = () => {
 
     }, []);
 
+    useEffect(() => {
+        AOS.init({ duration: "2000" });
+
+    }, []);
+
+
+
+
+
     return (
         <div>
             <div className="relative h-screen flex items-center justify-center" style={containerStyle}>
@@ -64,10 +74,10 @@ const Gallery = () => {
                 loader={<span className="loading loading-spinner loading-lg"></span>}
                 endMessage={<p className="text-center text-2xl text-pink-500 font-bold mt-5"><span className="loading loading-spinner text-error"></span></p>}
             >
-                <div className="grid lg:grid-cols-4 grid-cols-1 - gap-5 mt-8">
+                <div className="grid lg:grid-cols-6 grid-cols-1 - gap-5 mt-8"   >
                     {gallery.map((galleries, index) => (
-                        <div key={galleries._id || index} className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md">
-                            <img className="h-64 w-96 object-cover" src={galleries.image} alt="Card" />
+                        <div key={galleries._id || index} className="lg:max-w-md mx-auto bg-white rounded-xl overflow-hidden w-full shadow-md" data-aos="fade-up">
+                            <img className="h-40 lg:w-60 w-full object-cover" src={galleries.image} alt="Card" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2 text-center">{galleries.title}</div>
                             </div>

@@ -35,12 +35,12 @@ const AppliedTrainer = () => {
     const hendleMakeTrainer = (id) => {
 
         axiosSecure.patch(`/users?id=${id}`)
-        .then(res=>{
-            if (res.data?.modifiedCount > 0) {
-                refetch()
+            .then(res => {
+                if (res.data?.modifiedCount > 0) {
+                    refetch()
 
-            }
-        })
+                }
+            })
 
 
 
@@ -83,10 +83,12 @@ const AppliedTrainer = () => {
                                 <td> {item.name} </td>
                                 <td> {item.email} </td>
                                 <td>
-                                    <Link> <button className="" onClick={async () => {
+                                    {/* Open the modal using document.getElementById('ID').showModal() method */}
+                                    <button className="btn" onClick={async () => {
                                         await setData(item)
-                                        document.getElementById('my_modal_3').showModal()
-                                    }}><FaRegEye className="text-2xl "></FaRegEye></button></Link>
+                                        document.getElementById('my_modal_1').showModal()
+                                    }}><FaRegEye className="text-2xl "></FaRegEye></button>
+
                                 </td>
 
 
@@ -127,8 +129,43 @@ const AppliedTrainer = () => {
                 </form>
             </dialog> */}
 
-            
-            <dialog id="my_modal_3" className="modal">
+
+
+            {/*  runging  */}
+
+
+            <dialog id="my_modal_1" className="modal">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg"> {data.name} </h3>
+                    <p className="py-4">Press ESC key or click the button below to close</p>
+
+                    <form ref={form} onSubmit={handleSubmit} method="dialog">
+                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        <input type="text" defaultValue={data.name} name="name" />
+                        <input type="email" defaultValue={data.email} name="email" />
+                        <button type="submit" className="badge badge-outline">Reject</button>
+                    </form>
+                    
+                    <div className="card-actions justify-end cursor-pointer">
+                        <button onClick={() => hendleMakeTrainer(data._id)} className="badge badge-outline">Confirm</button>
+
+                    </div>
+                    <div className="modal-action">
+                        <form method="dialog">
+                            {/* if there is a button in form, it will close the modal */}
+                            <button className="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+
+
+
+
+
+
+            {/* <dialog id="my_modal_3" className="modal">
                 <div className="modal-box mt-10 ">
                     <form ref={form} onSubmit={handleSubmit} method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
@@ -142,7 +179,7 @@ const AppliedTrainer = () => {
 
                     </div>
                 </div>
-            </dialog>
+            </dialog> */}
 
         </>
     );

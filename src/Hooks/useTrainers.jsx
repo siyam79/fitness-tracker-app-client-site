@@ -1,13 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "./useAxiosPublic";
+import useAxiosSecure from "./useAxiosSecure";
+
 
 const useTrainers = () => {
 
-    const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
     const { data: trainer = [] ,refetch} = useQuery({
         queryKey: ["trainer"],
         queryFn: async () => {
-            const res = await axiosPublic.get(`/roleTrainer?role=trainer`)
+            const res = await axiosSecure.get(`/roleTrainer?role=trainer`)
             return res.data
         }
     })

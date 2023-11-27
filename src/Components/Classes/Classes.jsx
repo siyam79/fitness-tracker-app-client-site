@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import useCLass from "../../Hooks/useCLass";
 import PropTypes from 'prop-types';
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Classes = () => {
 
     // const data = useLoaderData()
@@ -12,7 +13,10 @@ const [data , setData] = useState({})
 
     const [allClass] = useCLass()
 
+    useEffect(() => {
+        AOS.init({ duration: "2000" });
 
+    }, []);
 
 
     return (
@@ -23,7 +27,7 @@ const [data , setData] = useState({})
                         allClass.map(item => <>
                             <div key={item._id} >
                                 <Link to='/trainer'>
-                                    <div className="card lg:w-60 w-44 h-64  bg-base-100 shadow-md mb-10 ">
+                                    <div className="card lg:w-60 w-44 h-64  bg-base-100 shadow-md mb-10 " data-aos="zoom-out-up">
                                         <figure><img src={item.image} alt="Shoes" /></figure>
                                         <div className="card-body">
                                             <h2 className="card-title uppercase">
