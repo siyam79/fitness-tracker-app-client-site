@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
 import useMember from "../../../Hooks/useMember";
 import { FaRegEye } from "react-icons/fa";
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import useAuth from "../../../Hooks/useAuth";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
-
+import { AiOutlineClose } from "react-icons/ai";
+import { ToastContainer, toast } from "react-toastify";
 
 const AppliedTrainer = () => {
     const axiosSecure = useAxiosSecure()
@@ -38,6 +38,11 @@ const AppliedTrainer = () => {
             .then(res => {
                 if (res.data?.modifiedCount > 0) {
                     refetch()
+                    toast.success(' Member Update  successfully', {
+                        position: 'top-center'
+
+                    })
+
 
                 }
             })
@@ -67,13 +72,14 @@ const AppliedTrainer = () => {
 
             <div>
                 <div className="overflow-x-auto">
-                    <table className="table table-zebra">
+                    <table className="table table-zebra w-full">
                         {/* head */}
                         <thead>
-                            <tr className="bg-slate-300 ">
+                            <tr className="bg-slate-300 w-full text-lg ">
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>email</th>
+                                <th>E-mail</th>
+                                <th>Role</th>
                                 <th> Action</th>
                             </tr>
                         </thead>
@@ -82,9 +88,10 @@ const AppliedTrainer = () => {
                                 <th>{i + 1}</th>
                                 <td> {item.name} </td>
                                 <td> {item.email} </td>
+                                <td className="uppercase"> {item.role} </td>
                                 <td>
                                     {/* Open the modal using document.getElementById('ID').showModal() method */}
-                                    <button className="btn" onClick={async () => {
+                                    <button className="" onClick={async () => {
                                         await setData(item)
                                         document.getElementById('my_modal_1').showModal()
                                     }}><FaRegEye className="text-2xl "></FaRegEye></button>
@@ -117,10 +124,12 @@ const AppliedTrainer = () => {
                     <h3 className="font-bold text-lg"> {data.name} </h3>
                     <p className="py-4">Press ESC key or click the button below to close</p>
 
+
+                    {/* TODO */}
                     <form ref={form} onSubmit={handleSubmit} method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"></button>
-                        <input className="hidden" type="text" defaultValue={data.name} name="name"  />
-                        <input  className="hidden" type="email" defaultValue={data.email} name="email" />
+                        <input className="hidden" type="text" defaultValue={data.name} name="name" />
+                        <input className="hidden" type="email" defaultValue={data.email} name="email" />
                         <button type="submit" className="badge badge-outline">Reject</button>
                     </form>
 
@@ -131,7 +140,7 @@ const AppliedTrainer = () => {
                     <div className="modal-action">
                         <form method="dialog">
                             {/* if there is a button in form, it will close the modal */}
-                            <button className="btn">Close</button>
+                            <button className="btn"><AiOutlineClose className="text-xl text-red-600" /></button>
                         </form>
                     </div>
                 </div>
@@ -158,6 +167,8 @@ const AppliedTrainer = () => {
                     </div>
                 </div>
             </dialog> */}
+
+            <ToastContainer></ToastContainer>
 
         </>
     );
