@@ -14,6 +14,7 @@ import Dashboard from "../Pages/MainLayOute/Dashboard";
 import AllSubscibers from "../Pages/Dashboard/AllSubscribers/AllSubscibers";
 import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 import AppliedTrainer from "../Pages/Dashboard/AppliedTrainer/AppliedTrainer";
+import PrivateRoute from "./PrivateRoute";
 // import ClassDetails from "../Components/Classes/ClassDetails";
 // import Member from "../Pages/Member/Member";
 // import NewsLetter from "../Pages/NewsLetter/NewsLetter";
@@ -60,7 +61,7 @@ const Route = createBrowserRouter([
             },
             {
                 path:'/beATainer',
-                element :<BeATainer></BeATainer>
+                element :<PrivateRoute><BeATainer></BeATainer></PrivateRoute>
             },
             // {
             //     path:'/member/:id',
