@@ -3,11 +3,14 @@ import useMember from "../../../Hooks/useMember";
 import { FaRegEye } from "react-icons/fa";
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
-// import { toast } from "react-toastify";
 import useAuth from "../../../Hooks/useAuth";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 
 const AppliedTrainer = () => {
+    const axiosSecure = useAxiosSecure()
+
+
     const { user } = useAuth()
     console.log(user.email);
     const [member, refetch] = useMember()
@@ -31,23 +34,31 @@ const AppliedTrainer = () => {
 
     const hendleMakeTrainer = (id) => {
 
+        axiosSecure.patch(`/users?id=${id}`)
+        .then(res=>{
+            if (res.data?.modifiedCount > 0) {
+                refetch()
+
+            }
+        })
 
 
-        fetch(`http://localhost:5000/users?id=${id}`,
-            {
-                method: "PATCH",
-            })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                if (data.modifiedCount > 0) {
-                    refetch()
 
-                }
-            })
-            .catch((error) => {
-                console.error("Error making user admin:", error);
-            });
+        // fetch(`http://localhost:5000/users?id=${id}`,
+        //     {
+        //         method: "PATCH",
+        //     })
+        //     .then((response) => response.json())
+        //     .then((data) => {
+        //         console.log(data);
+        //         if (data.modifiedCount > 0) {
+        //             refetch()
+
+        //         }
+        //     })
+        //     .catch((error) => {
+        //         console.error("Error making user admin:", error);
+        //     });
     };
 
 
