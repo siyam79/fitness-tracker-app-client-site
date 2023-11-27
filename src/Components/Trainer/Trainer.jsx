@@ -9,8 +9,7 @@ import { useEffect } from "react";
 // import useTrainers from "../../Hooks/useTrainers";
 
 const Trainer = () => {
-    // const [trainers] = useTrainers()
-
+    
     const [trainer] = useTrainers()
 
 

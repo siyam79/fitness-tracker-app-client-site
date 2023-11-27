@@ -107,28 +107,6 @@ const AppliedTrainer = () => {
 
 
 
-            {/* <dialog id="my_modal_2" className="modal">
-                <div className="modal-box">
-                    <h3 className="font-bold text-lg">Hello!</h3>
-                    <p className="py-4">Press ESC key or click outside to close</p>
-
-                    <form ref={form} onSubmit={handleSubmit} method="dialog">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                        <input type="text" defaultValue={data.name} name="name" />
-                        <input type="email" defaultValue={data.email} name="email" />
-                        <button type="submit" className="badge badge-outline">Reject</button>
-                    </form>
-
-                    <div className="card-actions justify-end cursor-pointer">
-                        <button onClick={() => hendleMakeTrainer(data._id)} className="badge badge-outline">Confirm</button>
-
-                    </div>
-                </div>
-                <form method="dialog" className="modal-backdrop">
-                    <button>close</button>
-                </form>
-            </dialog> */}
-
 
 
             {/*  runging  */}
@@ -140,12 +118,12 @@ const AppliedTrainer = () => {
                     <p className="py-4">Press ESC key or click the button below to close</p>
 
                     <form ref={form} onSubmit={handleSubmit} method="dialog">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                        <input type="text" defaultValue={data.name} name="name" />
-                        <input type="email" defaultValue={data.email} name="email" />
+                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"></button>
+                        <input className="hidden" type="text" defaultValue={data.name} name="name"  />
+                        <input  className="hidden" type="email" defaultValue={data.email} name="email" />
                         <button type="submit" className="badge badge-outline">Reject</button>
                     </form>
-                    
+
                     <div className="card-actions justify-end cursor-pointer">
                         <button onClick={() => hendleMakeTrainer(data._id)} className="badge badge-outline">Confirm</button>
 
