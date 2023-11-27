@@ -10,6 +10,8 @@ const TrainerDetails = () => {
         
                 <h1> {data.trainerName} </h1>
                 <p>{data.availableTimeSlot[0]} </p>
+                <p>{data.availableTimeSlot[1]} </p>
+                {/* <p> {data.skills?.skill3} </p> */}
             </div>
         </div>
     );

@@ -86,7 +86,7 @@ const AppliedTrainer = () => {
                         <tbody>
                             {member.map((item, i) => <tr key={item._id}>
                                 <th>{i + 1}</th>
-                                <td> {item.name} </td>
+                                <td> {item.trainerName} </td>
                                 <td> {item.email} </td>
                                 <td className="uppercase"> {item.role} </td>
                                 <td>

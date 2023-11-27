@@ -9,9 +9,9 @@ import { useEffect } from "react";
 // import useTrainers from "../../Hooks/useTrainers";
 
 const Trainer = () => {
-    
-    const [trainer] = useTrainers()
 
+    const [trainer] = useTrainers()
+    console.log(trainer);
 
 
     useEffect(() => {
@@ -34,10 +34,22 @@ const Trainer = () => {
                                     {item.trainerName}
                                     <div className="badge badge-secondary">NEW</div>
                                 </h2>
+                               
+
+                                {/* {item.availableTimeSlot.map(i => <div key={i}>
+                                    <p> {i} </p>
+                                </div>)} */}
+
+
+
+
                                 <div className=" flex items-center justify-center gap-6 text-2xl ">
                                     <Link><FaFacebook> </FaFacebook></Link>
                                     <FaInstagram></FaInstagram>
                                     <FaLinkedin></FaLinkedin>
+                                </div>
+                                <div>
+                                    {/* <h1> {item.availableTimeSlot[0]} </h1> */}
                                 </div>
 
                                 <div className="card-actions justify-center">

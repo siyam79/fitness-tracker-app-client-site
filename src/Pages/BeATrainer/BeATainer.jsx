@@ -35,13 +35,16 @@ const BeATainer = () => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
-        const name = form.name.value;
+        const trainerName = form.name.value;
         const age = form.age.value;
-        const photo = form.photo.value;
+        const profileImage = form.photo.value;
+        const experience = form.exprience.value;
+        const salary = form.salary.value;
         const timeDay = form.timeDay.value;
         const timeWeek = form.timeWeek.value;
         const timeHour = form.timeHour.value;
-        const role = "member"
+        const role = "member";
+        const status = "pending"
         const skills = {
             skill1: { checked: form.skill1.checked, value: form.skill1.checked ? form.skill1.value : '' },
             skill2: { checked: form.skill2.checked, value: form.skill2.checked ? form.skill2.value : '' },
@@ -56,7 +59,10 @@ const BeATainer = () => {
             }
         }
 
-        const trainerDoc = { email, age, timeDay, role, name, photo, timeWeek, timeHour, skills: checkedSkills }
+
+
+
+        const trainerDoc = { email, age, timeDay, status, role, salary, trainerName, profileImage, experience, timeWeek, timeHour, skills: checkedSkills }
         console.log(trainerDoc);
 
 
@@ -84,12 +90,12 @@ const BeATainer = () => {
                     <form onSubmit={handleApplied} className="px-2">
                         <div className=" lg:flex gap-4 ">
                             <div className="mb-4  w-full ">
-                                <label className="block  text-md font-semibold mb-2 " htmlFor="">Name</label>
+                                <label className="block  text-md font-semibold mb-2 " htmlFor="">Full Name</label>
                                 <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder=" Your Name " name="name" required />
                             </div>
 
                             <div className="mb-4  w-full ">
-                                <label className="block  text-md font-semibold mb-2 " htmlFor=""> Email </label>
+                                <label className="block  text-md font-semibold mb-2 " htmlFor="">Your Email </label>
                                 <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder="" readOnly defaultValue={user.email} name="email" required />
                             </div>
                         </div>
@@ -145,14 +151,24 @@ const BeATainer = () => {
                                     </div>
                                 </label>
                             </div>
-                            <div className="mb-4 w-full ">
-                                <label className="block text-md font-semibold mb-2 " htmlFor=""> Age  </label>
-                                <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 
-                                
-                            " type="number" placeholder=" Your Age " name="age" required />
+                            <div className=" flex ">
+                                <div className="mb-4 w-full lg:w-1/2 ">
+                                    <label className="block text-md font-semibold mb-2 " htmlFor=""> Age  </label>
+                                    <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500" type="number" placeholder=" Your Age " name="age" required />
 
+                                </div>
+                                <div className="mb-4 w-full lg:w-1/2  ">
+                                    <label className="block text-md font-semibold mb-2 " htmlFor=""> Monthly Salary </label>
+                                    <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500" type="number" placeholder=" Monthly Salary" name="salary" required />
+
+                                </div>
                             </div>
-                            {/* <input name="photo" type="file" className="file-input file-input-bordered w-full max-w-xs" /> */}
+                            <div className="mb-4 ">
+                                <label className="block  text-md font-semibold mb-2 " htmlFor=""> Years Of Experience </label>
+                                <textarea className=" bg-gray-800 w-full px-4 py-2 text-white border rounded-lg  focus:outline-none focus:border-blue-500 " name="exprience" id="" placeholder=" Years Of Experience....  " cols="20" rows="6"></textarea>
+                            </div>
+
+
                         </div>
 
 
