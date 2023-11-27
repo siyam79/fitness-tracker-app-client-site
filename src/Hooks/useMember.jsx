@@ -3,14 +3,14 @@ import useAxiosPublic from "./useAxiosPublic";
 
 const useMember = () => {
     const axiosPublic = useAxiosPublic();
-    const { data: member = [] } = useQuery({
+    const { data: member = [],refetch } = useQuery({
         queryKey: ["member"],
         queryFn: async () => {
-            const res = await axiosPublic.get(`http://localhost:5000/memberTrainer?role=member`)
+            const res = await axiosPublic.get(`/memberTrainer?role=member`)
             return res.data
         }
     })
-    return [member]
+    return [member,refetch]
 };
 
 export default useMember;
