@@ -59,10 +59,26 @@ const BeATainer = () => {
             }
         }
 
+        const timeSlot = {
+            slot1: { checked: form.slot1.checked, value: form.slot1.checked ? form.slot1.value : '' },
+            slot2: { checked: form.slot2.checked, value: form.slot2.checked ? form.slot2.value : '' },
+            slot3: { checked: form.slot3.checked, value: form.slot3.checked ? form.slot3.value : '' },
+            slot4: { checked: form.slot4.checked, value: form.slot4.checked ? form.slot4.value : '' },
+            slot5: { checked: form.slot5.checked, value: form.slot5.checked ? form.slot5.value : '' },
+            slot6: { checked: form.slot6.checked, value: form.slot6.checked ? form.slot6.value : '' }
+        };
+
+        const checkedSlot = {};
+        for (const [key, value] of Object.entries(timeSlot)) {
+            if (value.checked) {
+                checkedSlot[key] = value.value;
+            }
+        }
 
 
 
-        const trainerDoc = { email, age, timeDay, status, role, salary, trainerName, profileImage, experience, timeWeek, timeHour, skills: checkedSkills }
+
+        const trainerDoc = { email, age, timeDay, status, role, salary, trainerName, profileImage, experience, timeWeek, timeHour, skills: checkedSkills, timeSlot: checkedSlot }
         console.log(trainerDoc);
 
 
@@ -85,7 +101,7 @@ const BeATainer = () => {
     return (
         <div>
             <div>
-                <div className=" lg:w-1/2 mx-auto pt-1  bg-base-300 rounded-lg shadow-3xl mt-1 ">
+                <div className=" lg:w-[90%] mx-auto pt-1  bg-base-300 rounded-lg shadow-3xl mt-1 ">
                     <h2 className="text-3xl text-center text-fuchsia-800 font-bold mb-6 mt-10 ">  Applied Trainer  </h2>
                     <form onSubmit={handleApplied} className="px-2">
                         <div className=" lg:flex gap-4 ">
@@ -151,7 +167,46 @@ const BeATainer = () => {
                                     </div>
                                 </label>
                             </div>
-                            <div className=" flex ">
+                            <div className="form-control px-5">
+                                <label className="label">
+                                    <span className='label-text font-bold'> Available time slot </span>
+                                </label>
+                                <label className="input-group">
+                                    <div className="lg:flex gap-2">
+                                        <div className="flex gap-2" >
+                                            <input type="checkbox"
+                                                name="slot1" id="slot1" value={'6:00 AM - 7:00 AM'} />
+                                            <label htmlFor="slot1"><a href="#">6:00 AM - 7:00 AM</a></label>
+                                        </div>
+                                        <div className="flex gap-2" >
+                                            <input type="checkbox"
+                                                name="slot2" id="slot2" value={'7:00 AM - 8:00 AM'} />
+                                            <label htmlFor="slot2"><a href="#">7:00 AM - 8:00 AM</a></label>
+                                        </div>
+                                        <div className="flex gap-2" >
+                                            <input type="checkbox"
+                                                name="slot3" id="slot3" value={'8:00 AM - 9:00 AM'} />
+                                            <label htmlFor="slot3"><a href="#">8:00 AM - 9:00 AM</a></label>
+                                        </div>
+                                        <div className="flex gap-2" >
+                                            <input type="checkbox"
+                                                name="slot4" id="slot4" value={'10:00 AM - 11:00 AM'} />
+                                            <label htmlFor="slot4"><a href="#">10:00 AM - 11:00 AM</a></label>
+                                        </div>
+                                        <div className="flex gap-2" >
+                                            <input type="checkbox"
+                                                name="slot5" id="slot5" value={'3:00 PM - 4:00 PM'} />
+                                            <label htmlFor="slot5"><a href="#">3:00 PM - 4:00 PM</a></label>
+                                        </div>
+                                        <div className="flex gap-2" >
+                                            <input type="checkbox"
+                                                name="slot6" id="slot6" value={'7:00 PM - 8:00 PM'} />
+                                            <label htmlFor="slot6"><a href="#">7:00 PM - 8:00 PM</a></label>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div className=" flex gap-4 ">
                                 <div className="mb-4 w-full lg:w-1/2 ">
                                     <label className="block text-md font-semibold mb-2 " htmlFor=""> Age  </label>
                                     <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500" type="number" placeholder=" Your Age " name="age" required />

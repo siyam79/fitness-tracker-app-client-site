@@ -24,18 +24,17 @@ const Trainer = () => {
                 <Link to="/beATainer"> <button className=" text-center font-bold text-gray-600 hover:text-green-500 text-xl  badge badge-outline px-10  py-4  ">Become a Trainer</button></Link>
             </div>
 
-            <div className=" w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+            <div className=" w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  mb-10 ">
                 {
                     trainer.map(item => <div key={item._id}>
-                        <div className="card w-80 mx-auto bg-base-100 h-[350px]  shadow-xl" data-aos="fade-up-right">
+                        <div className="card w-80 mx-auto bg-base-100 h-[400px]  shadow-xl" data-aos="fade-up-right">
                             <figure><img className="  w-full  " src={item.profileImage} alt="Shoes" /></figure>
                             <div className="card-body">
-                                <h2 className="card-title">
+                                <h2 className="card-title font-bold text-xl ">
                                     {item.trainerName}
-                                    <div className="badge badge-secondary">NEW</div>
                                 </h2>
-                               
-
+                                <p className=" text-md font-normal "> {item.experience} </p>
+                            
                                 {/* {item.availableTimeSlot.map(i => <div key={i}>
                                     <p> {i} </p>
                                 </div>)} */}
@@ -43,7 +42,7 @@ const Trainer = () => {
 
 
 
-                                <div className=" flex items-center justify-center gap-6 text-2xl ">
+                                <div className=" mt-4 flex items-center justify-center gap-6 text-2xl ">
                                     <Link><FaFacebook> </FaFacebook></Link>
                                     <FaInstagram></FaInstagram>
                                     <FaLinkedin></FaLinkedin>

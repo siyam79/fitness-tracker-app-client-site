@@ -26,10 +26,10 @@ const Login = () => {
 
         //    password validation
 
-        if (!/(?=.*?[A-Z])(?=.*?[#?!@$%^&*-]).{6,}/.test(password)) {
-            toast.error('Please Cheack your Email or password');
-            return;
-        }
+        // if (!/(?=.*?[A-Z])(?=.*?[#?!@$%^&*-]).{6,}/.test(password)) {
+        //     toast.error('Please Cheack your Email or password');
+        //     return;
+        // }
 
         //  User Lggin
 

@@ -1,6 +1,7 @@
 [
   {
     "trainerName": "John Doe",
+    "email":"brana4775@gmail.com",
     "profileImage": "https://i.ibb.co/zrRr4Vy/omid-armin-89poi2a-VXX0-unsplash.jpg",
     "experience": "Certified Personal Trainer with 10 years of experience in fitness and nutrition.",
     "socialIcons": {
@@ -8,15 +9,27 @@
       "twitter": "https://twitter.com/johndoe",
       "instagram": "https://www.instagram.com/johndoe"
     },
-    "availableTimeSlot": [
-      "Monday 8:00 AM - 2:00 PM",
-      "Wednesday 2:00 PM - 8:00 PM",
-      "Friday 10:00 AM - 4:00 PM"
-    ],
-    "role": "trainer"
+    "skills": {
+      "skill1": "yoga",
+      "skill2": "body_building",
+      "skill3": "muscle_gain",
+      "skill4": "weight_loss"
+    },
+    "timeSlot": {
+      "slot1": "6:00 AM - 7:00 AM",
+      "slot2": "6:00 AM - 7:00 AM",
+      "slot3": "8:00 AM - 9:00 AM",
+      "slot4": "10:00 AM - 11:00 AM",
+      "slot5": "3:00 PM - 4:00 PM",
+      "slot6": "7:00 PM - 8:00 PM"
+    },
+    "role": "trainer",
+    "status": "pending",
+    "salary": 30
   },
   {
     "trainerName": "Jane Smith",
+    "email":"brana4775@gmail.com",
     "profileImage": "https://i.ibb.co/mG6vQ2Q/victor-freitas-nl-ZTj-UZX2qo-unsplash.jpg",
     "experience": "Fitness enthusiast and trainer specializing in high-intensity interval training (HIIT).",
     "socialIcons": {
@@ -24,15 +37,27 @@
       "twitter": "https://twitter.com/janesmith",
       "instagram": "https://www.instagram.com/janesmith"
     },
-    "availableTimeSlot": [
-      "Tuesday 9:00 AM - 3:00 PM",
-      "Thursday 4:00 PM - 10:00 PM",
-      "Saturday 1:00 PM - 7:00 PM"
-    ],
-    "role": "trainer"
+    "skills": {
+      "skill1": "yoga",
+      "skill2": "body_building",
+      "skill3": "muscle_gain",
+      "skill4": "weight_loss"
+    },
+    "timeSlot": {
+      "slot1": "6:00 AM - 7:00 AM",
+      "slot2": "6:00 AM - 7:00 AM",
+      "slot3": "8:00 AM - 9:00 AM",
+      "slot4": "10:00 AM - 11:00 AM",
+      "slot5": "3:00 PM - 4:00 PM",
+      "slot6": "7:00 PM - 8:00 PM"
+    },
+    "role": "trainer",
+    "status": "pending",
+    "salary": 70
   },
   {
     "trainerName": "Alex Johnson",
+    "email":"brana4775@gmail.com",
     "profileImage": "https://i.ibb.co/8bpzJ5n/alonso-reyes-0-Hl-I76m4jx-U-unsplash.jpg",
     "experience": "Former athlete turned personal trainer, passionate about helping clients achieve their fitness goals.",
     "socialIcons": {
@@ -40,15 +65,27 @@
       "twitter": "https://twitter.com/alexjohnson",
       "instagram": "https://www.instagram.com/alexjohnson"
     },
-    "availableTimeSlot": [
-      "Monday 3:00 PM - 9:00 PM",
-      "Wednesday 10:00 AM - 4:00 PM",
-      "Friday 5:00 PM - 11:00 PM"
-    ],
-    "role": "trainer"
+    "skills": {
+      "skill1": "yoga",
+      "skill2": "body_building",
+      "skill3": "muscle_gain",
+      "skill4": "weight_loss"
+    },
+    "timeSlot": {
+      "slot1": "6:00 AM - 7:00 AM",
+      "slot2": "6:00 AM - 7:00 AM",
+      "slot3": "8:00 AM - 9:00 AM",
+      "slot4": "10:00 AM - 11:00 AM",
+      "slot5": "3:00 PM - 4:00 PM",
+      "slot6": "7:00 PM - 8:00 PM"
+    },
+    "role": "trainer",
+    "status": "pending",
+    "salary": 100
   },
   {
     "trainerName": "Emily Davis",
+    "email":"brana4775@gmail.com",
     "profileImage": "https://i.ibb.co/Qcj2119/anastase-maragos-7k-Ep-UPB8v-Nk-unsplash.jpg",
     "experience": "Yoga instructor with a focus on mindfulness and holistic wellness.",
     "socialIcons": {
@@ -56,15 +93,27 @@
       "twitter": "https://twitter.com/emilydavis",
       "instagram": "https://www.instagram.com/emilydavis"
     },
-    "availableTimeSlot": [
-      "Tuesday 1:00 PM - 7:00 PM",
-      "Thursday 9:00 AM - 3:00 PM",
-      "Saturday 3:00 PM - 9:00 PM"
-    ],
-    "role": "trainer"
+    "skills": {
+      "skill1": "yoga",
+      "skill2": "body_building",
+      "skill3": "muscle_gain",
+      "skill4": "weight_loss"
+    },
+    "timeSlot": {
+      "slot1": "6:00 AM - 7:00 AM",
+      "slot2": "6:00 AM - 7:00 AM",
+      "slot3": "8:00 AM - 9:00 AM",
+      "slot4": "10:00 AM - 11:00 AM",
+      "slot5": "3:00 PM - 4:00 PM",
+      "slot6": "7:00 PM - 8:00 PM"
+    },
+    "role": "trainer",
+    "status": "pending",
+    "salary": 50
   },
   {
     "trainerName": "Mark Taylor",
+    "email":"brana4775@gmail.com",
     "profileImage": "https://i.ibb.co/8bpzJ5n/alonso-reyes-0-Hl-I76m4jx-U-unsplash.jpg",
     "experience": "Certified nutritionist and fitness trainer dedicated to promoting a healthy lifestyle.",
     "socialIcons": {
@@ -72,15 +121,27 @@
       "twitter": "https://twitter.com/marktaylor",
       "instagram": "https://www.instagram.com/marktaylor"
     },
-    "availableTimeSlot": [
-      "Monday 1:00 PM - 7:00 PM",
-      "Wednesday 5:00 PM - 11:00 PM",
-      "Friday 9:00 AM - 3:00 PM"
-    ],
-    "role": "trainer"
+    "skills": {
+      "skill1": "yoga",
+      "skill2": "body_building",
+      "skill3": "muscle_gain",
+      "skill4": "weight_loss"
+    },
+    "timeSlot": {
+      "slot1": "6:00 AM - 7:00 AM",
+      "slot2": "6:00 AM - 7:00 AM",
+      "slot3": "8:00 AM - 9:00 AM",
+      "slot4": "10:00 AM - 11:00 AM",
+      "slot5": "3:00 PM - 4:00 PM",
+      "slot6": "7:00 PM - 8:00 PM"
+    },
+    "role": "trainer",
+    "status": "pending",
+    "salary": 200
   },
   {
     "trainerName": "Sarah Brown",
+    "email":"brana4775@gmail.com",
     "profileImage": "https://i.ibb.co/mG6vQ2Q/victor-freitas-nl-ZTj-UZX2qo-unsplash.jpg",
     "experience": "Specializing in weightlifting and strength training, helping clients build both physical and mental strength.",
     "socialIcons": {
@@ -88,11 +149,22 @@
       "twitter": "https://twitter.com/sarahbrown",
       "instagram": "https://www.instagram.com/sarahbrown"
     },
-    "availableTimeSlot": [
-      "Tuesday 4:00 PM - 10:00 PM",
-      "Thursday 2:00 PM - 8:00 PM",
-      "Saturday 10:00 AM - 4:00 PM"
-    ],
-    "role": "trainer"
+    "skills": {
+      "skill1": "yoga",
+      "skill2": "body_building",
+      "skill3": "muscle_gain",
+      "skill4": "weight_loss"
+    },
+    "timeSlot": {
+      "slot1": "6:00 AM - 7:00 AM",
+      "slot2": "6:00 AM - 7:00 AM",
+      "slot3": "8:00 AM - 9:00 AM",
+      "slot4": "10:00 AM - 11:00 AM",
+      "slot5": "3:00 PM - 4:00 PM",
+      "slot6": "7:00 PM - 8:00 PM"
+    },
+    "role": "trainer",
+    "status": "pending",
+    "salary": 30
   }
 ]
