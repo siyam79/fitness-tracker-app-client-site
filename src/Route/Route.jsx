@@ -16,6 +16,7 @@ import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 import AppliedTrainer from "../Pages/Dashboard/AppliedTrainer/AppliedTrainer";
 import PrivateRoute from "./PrivateRoute";
 import Pyment from "../Pages/Pyment/Pyment";
+import AddForum from "../Pages/Dashboard/AddForum/AddForum";
 // import ClassDetails from "../Components/Classes/ClassDetails";
 // import Member from "../Pages/Member/Member";
 // import NewsLetter from "../Pages/NewsLetter/NewsLetter";
@@ -23,28 +24,28 @@ import Pyment from "../Pages/Pyment/Pyment";
 
 const Route = createBrowserRouter([
     {
-        path : '/',
+        path: '/',
         element: <MainLayOut></MainLayOut>,
-        errorElement:<ErrorPage></ErrorPage>,
-        children:[
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
             {
-                path:'/gallery',
-                element:<Gallery></Gallery>
+                path: '/gallery',
+                element: <Gallery></Gallery>
             },
             {
-                path:'/trainer',
-                element : <Trainer></Trainer>
+                path: '/trainer',
+                element: <Trainer></Trainer>
             },
             {
-                path:'/classes',
-                element :<Classes></Classes>,
+                path: '/classes',
+                element: <Classes></Classes>,
                 // loader : ({params})=> fetch(`http://localhost:5000/class/${params.id}`)
             },
-            
+
             // {
             //     path:'/class/:id',
             //     element :<ClassDetails></ClassDetails>,
@@ -52,17 +53,17 @@ const Route = createBrowserRouter([
             // },
 
             {
-                path:'/community',
-                element :<Community></Community>
+                path: '/community',
+                element: <Community></Community>
             },
             {
-                path:'/trainer/:id',
-                element : <TrainerDetails></TrainerDetails>,
-                loader : ({params})=> fetch(`http://localhost:5000/trainers/${params.id}`)
+                path: '/trainer/:id',
+                element: <TrainerDetails></TrainerDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/trainers/${params.id}`)
             },
             {
-                path:'/beATainer',
-                element :<PrivateRoute><BeATainer></BeATainer></PrivateRoute>
+                path: '/beATainer',
+                element: <PrivateRoute><BeATainer></BeATainer></PrivateRoute>
             },
             // {
             //     path:'/member/:id',
@@ -70,40 +71,58 @@ const Route = createBrowserRouter([
             //     loader : ({params})=> fetch(`http://localhost:5000/trainers/${params.id}`)
             // },
             {
-                path:'/login',
-                element :<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
-                element :<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
         ]
     },
     {
-        path:'dashboard',
-        element:<Dashboard></Dashboard>,
-        children:[
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
             {
-                path:'allSubscribers',
-                element:<AllSubscibers></AllSubscibers>
+                path: 'allSubscribers',
+                element: <AllSubscibers></AllSubscibers>
             },
             {
-                path:'allTrainers',
-                element:<AllTrainers></AllTrainers>
+                path: 'allTrainers',
+                element: <AllTrainers></AllTrainers>
             },
             {
-                path:'appliedTrainers',
-                element:<AppliedTrainer></AppliedTrainer>
+                path: 'appliedTrainers',
+                element: <AppliedTrainer></AppliedTrainer>
             },
             {
-                path:'pyment',
-                element:<Pyment></Pyment>
+                path: 'pyment',
+                element: <Pyment></Pyment>
             },
 
+            //  trainer route 
+            {
+                path: 'trainer',
+                element:<Trainer></Trainer>,
+            },
+            {
+                path: 'addForum',
+                element:<AddForum></AddForum> ,
+            },
         ]
-    }
+    },
+    // {
+    //     path:"trainer",
+    //     element:<Trainer></Trainer>,
+    //     children:[
+    //         {
+
+    //         }
+    //     ]
+    // },
 
 ])
-   
+
 
 export default Route;

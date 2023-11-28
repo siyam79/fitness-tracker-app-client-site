@@ -1,11 +1,15 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { useState } from "react";
 
 const CheckoutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
+
+    const [error, setError] = useState('')
     const handlePyment = async (event) => {
         event.preventDefault();
-        if (!stripe || elements) {
+        // console.log(event);
+        if (!stripe || !elements) {
             return
         }
         const card = elements.getElement(CardElement)
@@ -18,13 +22,13 @@ const CheckoutForm = () => {
             card
         })
         if (error) {
-            console.log("payment error");
+            console.log("payment error", error);
+            setError(error.message);
         }
-        else{
-            console.log('payment method' , paymentMethod);
+        else {
+            console.log('payment method', paymentMethod);
+            setError('');
         }
-
-
 
     }
 
@@ -49,11 +53,11 @@ const CheckoutForm = () => {
                         },
                     }}
                 />
-                <div className="mt-4 ">
-                    <button className=" badge badge-outline py-4 px-6  " type="submit" disabled={!stripe}>
-                        Payment
-                    </button>
-                </div>
+
+                <button className=" badge badge-outline px-4 py-3 mt-4" type="submit">
+                    Payment
+                </button>
+                <p className="text-red-500 text-md "> {error}</p>
             </form>
 
         </div>

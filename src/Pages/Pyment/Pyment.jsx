@@ -4,11 +4,11 @@ import CheckoutForm from "./CheckoutForm/CheckoutForm";
 
 
 // TODO 
-const stripePromise = loadStripe(import.meta.env.VITE_PYMENT)
+const stripePromise = loadStripe(import.meta.env.VITE_Payment_Geteway_PK)
 
 const Pyment = () => {
     return (
-        <div className=" ">
+        <div>
             <Elements stripe={stripePromise}>
             <CheckoutForm></CheckoutForm>
             </Elements>

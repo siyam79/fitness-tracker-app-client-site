@@ -10,7 +10,7 @@ const AllTrainers = () => {
         <div>
 
 
-            <div className=" mt-10">
+            <div className="">
 
                 <div className="overflow-x-auto">
                     <table className="table">

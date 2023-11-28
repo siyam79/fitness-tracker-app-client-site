@@ -58,7 +58,6 @@ const Gallery = () => {
 
 
 
-
     return (
         <div>
             <div className="relative h-screen flex items-center justify-center" style={containerStyle}>
