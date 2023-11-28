@@ -36,10 +36,6 @@ const useAxiosSecure = () => {
   })
 
 
-
-
-
-
   return axiosSecure
 };
 

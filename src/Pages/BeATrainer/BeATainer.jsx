@@ -109,7 +109,6 @@ const BeATainer = () => {
                                 <label className="block  text-md font-semibold mb-2 " htmlFor="">Full Name</label>
                                 <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder=" Your Name " name="name" required />
                             </div>
-
                             <div className="mb-4  w-full ">
                                 <label className="block  text-md font-semibold mb-2 " htmlFor="">Your Email </label>
                                 <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder="" readOnly defaultValue={user.email} name="email" required />

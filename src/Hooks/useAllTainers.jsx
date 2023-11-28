@@ -14,5 +14,4 @@ const useAllTainers = () => {
     return [allTrainer,refetch]
 };
 
-
 export default useAllTainers;

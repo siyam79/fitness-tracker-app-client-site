@@ -17,10 +17,9 @@ import AppliedTrainer from "../Pages/Dashboard/AppliedTrainer/AppliedTrainer";
 import PrivateRoute from "./PrivateRoute";
 import Pyment from "../Pages/Pyment/Pyment";
 import AddForum from "../Pages/Dashboard/AddForum/AddForum";
-// import ClassDetails from "../Components/Classes/ClassDetails";
-// import Member from "../Pages/Member/Member";
-// import NewsLetter from "../Pages/NewsLetter/NewsLetter";
-// import PrivateRoute from "../Provider/PrivateRoute";
+import ManageSolt from "../Trainer/ManageSolt/ManageSolt";
+import ManagMember from "../Trainer/ManageMember/ManagMember";
+import AddClass from "../Trainer/AddClass/AddClass";
 
 const Route = createBrowserRouter([
     {
@@ -97,18 +96,26 @@ const Route = createBrowserRouter([
                 element: <AppliedTrainer></AppliedTrainer>
             },
             {
-                path: 'pyment',
+                path: '/dashboard/pyment/:_id/:salary',
                 element: <Pyment></Pyment>
             },
 
             //  trainer route 
             {
-                path: 'trainer',
-                element:<Trainer></Trainer>,
+                path: 'manageMember',
+                element: <ManagMember></ManagMember>
             },
             {
                 path: 'addForum',
                 element:<AddForum></AddForum> ,
+            },
+            {
+                path: 'manageSlot',
+                element:<ManageSolt></ManageSolt>,
+            },
+            {
+                path: 'addClass',
+                element:<AddClass></AddClass>,
             },
         ]
     },

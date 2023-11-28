@@ -9,8 +9,6 @@ import { ToastContainer, toast } from "react-toastify";
 
 const AppliedTrainer = () => {
     const axiosSecure = useAxiosSecure()
-
-
     const { user } = useAuth()
     console.log(user.email);
     const [member, refetch] = useMember()
