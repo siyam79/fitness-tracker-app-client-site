@@ -80,7 +80,7 @@ const AppliedTrainer = () => {
                                 <th>Name</th>
                                 <th>E-mail</th>
                                 <th>Role</th>
-                                <th> Action</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -122,7 +122,11 @@ const AppliedTrainer = () => {
             <dialog id="my_modal_1" className="modal">
                 <div className="modal-box">
                     <h3 className="font-bold text-lg"> {data.name} </h3>
-                    <p className="py-4">Press ESC key or click the button below to close</p>
+                    <div className=" flex gap-4  ">
+                        <img className=" w-60 " src={data.profileImage} alt="" />
+                        <h1 className="font-semibold text-xl "> Monthly-Salary ${data.salary} </h1>
+                    </div>
+                    <p className="py-4 font-semibold text-lg "> {data.experience} </p>
 
 
                     {/* TODO */}
@@ -130,11 +134,11 @@ const AppliedTrainer = () => {
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"></button>
                         <input className="hidden" type="text" defaultValue={data.name} name="name" />
                         <input className="hidden" type="email" defaultValue={data.email} name="email" />
-                        <button type="submit" className="badge badge-outline">Reject</button>
+                        <button type="submit" className="badge badge-outline px-4 py-3 mt-6 ">Reject</button>
                     </form>
 
                     <div className="card-actions justify-end cursor-pointer">
-                        <button onClick={() => hendleMakeTrainer(data._id)} className="badge badge-outline">Confirm</button>
+                        <button onClick={() => hendleMakeTrainer(data._id)} className="badge badge-outline px-4 py-3 ">Confirm</button>
 
                     </div>
                     <div className="modal-action">
