@@ -18,11 +18,10 @@ const TrainerDetails = () => {
                                 {/* <p>{data.timeSlot.slot1} </p> */}
                                 <button className="mr-6 ">{data.timeSlot.slot1}</button>
                                 <button className="mr-6">{data.timeSlot.slot2}</button>
-                                <button className=" mr-6">{data.timeSlot.slot3}</button>
+                                <button className="mr-6">{data.timeSlot.slot3}</button>
                                 <button className="mr-6">{data.timeSlot.slot4}</button>
                                 <button className="mr-6">{data.timeSlot.slot5}</button>
                                 <button>{data.timeSlot.slot6}</button>
-
                             </div>
                             <div>
                                 <Link to='/trainer'><IoReturnDownBackSharp className="text-4xl mt-4 hover:text-red-700 "></IoReturnDownBackSharp></Link>

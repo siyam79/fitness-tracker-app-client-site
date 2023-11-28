@@ -7,6 +7,7 @@ const TeamSection = () => {
     // console.log(data);
     return (
         <div className=" w-[95%] mx-auto ">
+            <h1> team </h1>
             {/* <div className=" grid grid-cols-1  lg:grid-cols-3 md:grid-cols-2 gap-10 mb-20 ">
                 {data?.map(item => <div key={item._id} className=" w-full lg:w-[300px] bg-base-100 shadow-xl rounded-2xl mt-6  ">
                     <figure className="px-10 pt-10">

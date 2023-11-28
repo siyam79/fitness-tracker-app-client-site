@@ -15,6 +15,7 @@ import AllSubscibers from "../Pages/Dashboard/AllSubscribers/AllSubscibers";
 import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 import AppliedTrainer from "../Pages/Dashboard/AppliedTrainer/AppliedTrainer";
 import PrivateRoute from "./PrivateRoute";
+import Pyment from "../Pages/Pyment/Pyment";
 // import ClassDetails from "../Components/Classes/ClassDetails";
 // import Member from "../Pages/Member/Member";
 // import NewsLetter from "../Pages/NewsLetter/NewsLetter";
@@ -93,7 +94,12 @@ const Route = createBrowserRouter([
             {
                 path:'appliedTrainers',
                 element:<AppliedTrainer></AppliedTrainer>
-            }
+            },
+            {
+                path:'pyment',
+                element:<Pyment></Pyment>
+            },
+
         ]
     }
 
