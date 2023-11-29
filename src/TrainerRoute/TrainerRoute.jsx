@@ -1,11 +1,14 @@
 import { Navigate, useLocation } from "react-router-dom";
-import useAdmin from "../../../Hooks/useAdmin";
-import useAuth from "../../../Hooks/useAuth";
+
 import PropTypes from 'prop-types';
-const AdminRoute = ({ children }) => {
-    
+import useIsTrainer from "../Hooks/useIsTrainer";
+import useAuth from "../Hooks/useAuth";
+
+const TrainerRoute = ({ children }) => {
+
     const { user, loading } = useAuth()
-    const [isAdmin, isAdminLoading] = useAdmin()
+    const [isTrainer, isAdminLoading] = useIsTrainer()
+    
     const location = useLocation()
     console.log(location.pathname);
 
@@ -16,16 +19,16 @@ const AdminRoute = ({ children }) => {
         </div>
     }
 
-    if (user && isAdmin) {
+    if (user && isTrainer) {
         return children
 
     }
     return <Navigate state={location.pathname} to='/login'></Navigate>
 
 };
-AdminRoute.propTypes = {
+TrainerRoute.propTypes = {
     children: PropTypes.object
 }
 
 
-export default AdminRoute;
+export default TrainerRoute;

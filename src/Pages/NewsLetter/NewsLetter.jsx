@@ -1,13 +1,12 @@
 
 import { useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 // import useAuth from '../../Hooks/useAuth';
 
 
 const NewsLetter = () => {
-
-
-
+    const axiosPublic = useAxiosPublic()
     const handleNewsLetter = (e) => {
         e.preventDefault();
 
@@ -20,31 +19,29 @@ const NewsLetter = () => {
         const newsLetter = {
             name,
             email,
-            number:"20"
+            number: "20"
         };
         console.log(newsLetter);
 
-        fetch('http://localhost:5000/newsLetter', {
-            method: 'POST',
-            headers: {
-                'content-type': "application/json",
-            },
-            body: JSON.stringify(newsLetter)
-        }).then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.insertedId) {
-                    toast.success(" News Letter Collection Success Full ", {
-                        position: "top-center"
-                    })
-                   form.reset()
-                }
 
+        axiosPublic.post('/newsLetter', newsLetter)
+            .then(res => {
+                console.log(res.data);
+                if (res.data.insertedId) {
+                    toast.success('Subscribe successfully', {
+                        position: 'top-center'
+
+                    })
+                    // window.location.reload()
+                    // navigate('/')
+                    form.reset()
+                }
             })
+
     }
 
     useEffect(() => {
-        document.title = " Fitness-Tracker | News Letter ";
+        document.title = "Fitness-Tracker | News Letter ";
     }, []);
     return (
         <section id="contact" className=" py-4 px-3 ">
@@ -58,8 +55,8 @@ const NewsLetter = () => {
                         <input className='px-4' type="email" name="email" required id="" placeholder="Email Address" />
 
                         <div>
-                        <button className=" bg-pink-600 px-6 py-2 rounded-md font-bold  ">Subscribe now </button> 
-                        
+                            <button className=" bg-pink-600 px-6 py-2 rounded-md font-bold  ">Subscribe now </button>
+
                         </div>
 
                     </form>

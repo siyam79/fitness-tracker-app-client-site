@@ -24,6 +24,8 @@ import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 import Balance from "../Pages/Dashboard/Balance/Balance";
 import ActiveLog from "../Member/ActiveLog/ActiveLog";
 import Profile from "../Pages/Member/Profile/Profile";
+import AdminRoute from "../Pages/Dashboard/AdminRoute/AdminRoute";
+import TrainerRoute from "../TrainerRoute/TrainerRoute";
 
 const Route = createBrowserRouter([
     {
@@ -68,11 +70,7 @@ const Route = createBrowserRouter([
                 path: '/beATainer',
                 element: <PrivateRoute><BeATainer></BeATainer></PrivateRoute>
             },
-            // {
-            //     path:'/member/:id',
-            //     element :<Member></Member>,
-            //     loader : ({params})=> fetch(`http://localhost:5000/trainers/${params.id}`)
-            // },
+           
             {
                 path: '/login',
                 element: <Login></Login>
@@ -85,19 +83,19 @@ const Route = createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: <Dashboard></Dashboard>,
+        element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
             {
                 path: 'allSubscribers',
-                element: <AllSubscibers></AllSubscibers>
+                element: <AdminRoute><AllSubscibers></AllSubscibers></AdminRoute>
             },
             {
                 path: 'allTrainers',
-                element: <AllTrainers></AllTrainers>
+                element: <AdminRoute><AllTrainers></AllTrainers></AdminRoute>
             },
             {
                 path: 'balance',
-                element: <Balance></Balance>
+                element: <AdminRoute><Balance></Balance></AdminRoute>
             },
             {
                 path: 'appliedTrainers',
@@ -105,7 +103,7 @@ const Route = createBrowserRouter([
             },
             {
                 path: '/dashboard/pyment/:_id/:salary/:status',
-                element:<Pyment></Pyment>
+                element:<AdminRoute><Pyment></Pyment></AdminRoute>
             },
             // {
             //     path: '/dashboard/pyment/:_id/:salary',
@@ -113,25 +111,25 @@ const Route = createBrowserRouter([
             // },
             {
                 path: 'paymentHistory',
-                element: <PaymentHistory></PaymentHistory>
+                element:<AdminRoute> <PaymentHistory></PaymentHistory></AdminRoute>
             },
 
             //  trainer route 
             {
                 path: 'manageMember',
-                element: <ManagMember></ManagMember>
+                element: <TrainerRoute><ManagMember></ManagMember></TrainerRoute>
             },
             {
                 path: 'addForum',
-                element:<AddForum></AddForum> ,
+                element:<TrainerRoute><AddForum></AddForum></TrainerRoute> ,
             },
             {
                 path: 'manageSlot',
-                element:<ManageSolt></ManageSolt>,
+                element:<TrainerRoute><ManageSolt></ManageSolt></TrainerRoute>,
             },
             {
                 path: 'addClass',
-                element:<AddClass></AddClass>,
+                element:<TrainerRoute><AddClass></AddClass></TrainerRoute>,
             },
 
             //   Member  route 
@@ -145,15 +143,7 @@ const Route = createBrowserRouter([
             },
         ]
     },
-    // {
-    //     path:"trainer",
-    //     element:<Trainer></Trainer>,
-    //     children:[
-    //         {
-
-    //         }
-    //     ]
-    // },
+    
 
 ])
 

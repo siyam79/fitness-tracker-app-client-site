@@ -5,6 +5,8 @@ import useAuth from '../../../Hooks/useAuth';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import PropTypes from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+// import { Navigate } from 'react-router-dom';
 
 
 const CheckoutForm = ({ salary, trainerId }) => {
@@ -12,6 +14,7 @@ const CheckoutForm = ({ salary, trainerId }) => {
     const axiosSecure = useAxiosSecure()
     const [error, setError] = useState('');
     const stripe = useStripe();
+    const navigate = useNavigate()
     const [transactionId, setTransactionId] = useState('');
     const {user} = useAuth()
     console.log(user.email);
@@ -95,6 +98,10 @@ if (paymentIntent) {
                 position: 'top-center'
 
             })
+            setTimeout(() => {
+                navigate('/dashboard/paymentHistory')
+            }, 1000);
+    
         }
     })
 }
@@ -113,6 +120,11 @@ if (paymentIntent) {
             }
            const res = await axiosSecure.post('/paymentHistory', payment);
            console.log('payments Save ' , res.data);
+          
+           setTimeout(() => {
+            navigate('/dashboard/paymentHistory')
+        }, 1000);
+
         //     console.log(res=>{
         //         console.log(res.data);
         //     });
