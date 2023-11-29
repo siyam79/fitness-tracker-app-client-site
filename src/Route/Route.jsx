@@ -20,6 +20,10 @@ import AddForum from "../Pages/Dashboard/AddForum/AddForum";
 import ManageSolt from "../Trainer/ManageSolt/ManageSolt";
 import ManagMember from "../Trainer/ManageMember/ManagMember";
 import AddClass from "../Trainer/AddClass/AddClass";
+import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
+import Balance from "../Pages/Dashboard/Balance/Balance";
+import ActiveLog from "../Member/ActiveLog/ActiveLog";
+import Profile from "../Pages/Member/Profile/Profile";
 
 const Route = createBrowserRouter([
     {
@@ -92,12 +96,24 @@ const Route = createBrowserRouter([
                 element: <AllTrainers></AllTrainers>
             },
             {
+                path: 'balance',
+                element: <Balance></Balance>
+            },
+            {
                 path: 'appliedTrainers',
                 element: <AppliedTrainer></AppliedTrainer>
             },
             {
-                path: '/dashboard/pyment/:_id/:salary',
-                element: <Pyment></Pyment>
+                path: '/dashboard/pyment/:_id/:salary/:status',
+                element:<Pyment></Pyment>
+            },
+            // {
+            //     path: '/dashboard/pyment/:_id/:salary',
+            //     element: <Pyment></Pyment>
+            // },
+            {
+                path: 'paymentHistory',
+                element: <PaymentHistory></PaymentHistory>
             },
 
             //  trainer route 
@@ -116,6 +132,16 @@ const Route = createBrowserRouter([
             {
                 path: 'addClass',
                 element:<AddClass></AddClass>,
+            },
+
+            //   Member  route 
+            {
+                path: 'activeLog',
+                element:<ActiveLog></ActiveLog>
+            },
+            {
+                path: 'profile',
+                element:<Profile></Profile>
             },
         ]
     },

@@ -8,12 +8,12 @@ import { useParams } from "react-router-dom";
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_Geteway_PK)
 
 const Pyment = () => {
-    const {salary, _id} = useParams();
-    console.log(salary, _id);
+    const {salary, _id , status } = useParams();
+    console.log(salary, _id , status);
     return (
         <div>
             <Elements stripe={stripePromise}>
-            <CheckoutForm salary={salary} trainerId={_id}></CheckoutForm>
+            <CheckoutForm salary={salary} trainerId={_id} status={status} ></CheckoutForm>
             </Elements>
         </div>
     );

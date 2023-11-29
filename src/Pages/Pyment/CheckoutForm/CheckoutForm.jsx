@@ -2,15 +2,20 @@ import  { useState, useEffect} from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import axios from 'axios';
 // import useAuth from '../../../Hooks/useAuth';
-// import useAxiosSecure from '../../../Hooks/useAxiosSecure';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import PropTypes from 'prop-types';
+import { ToastContainer, toast } from 'react-toastify';
+
+
 const CheckoutForm = ({ salary, trainerId }) => {
-    // const axiosSecure = useAxiosSecure()
+    console.log(trainerId);
+    const axiosSecure = useAxiosSecure()
     const [error, setError] = useState('');
     const stripe = useStripe();
     const [transactionId, setTransactionId] = useState('');
     // const {user} = useAuth()
-    // console.log(user.displayName);
+    // console.log(user.email);
+
     const [clientSecret, setClientSecret] = useState();
     const elements = useElements();
 
@@ -81,6 +86,19 @@ const CheckoutForm = ({ salary, trainerId }) => {
             if(paymentIntent.status === 'succeeded')
             console.log('transaction id', paymentIntent.id);
             setTransactionId(paymentIntent.id)
+if (paymentIntent) {
+    axiosSecure.patch(`/user?id=${trainerId}`)
+    .then(res => {
+        console.log(res.data);
+        if (res.data?.modifiedCount > 0) {
+            toast.success('Payment Success Full', {
+                position: 'top-center'
+
+            })
+        }
+    })
+}
+
 
             // const payment = {
             //     email: user?.email,
@@ -133,9 +151,19 @@ const CheckoutForm = ({ salary, trainerId }) => {
                 >
                     Pay
                 </button>
+
+                {/* <button
+                    type="submit"
+                    disabled={!stripe || !clientSecret}
+                    className="w-full bg-blue-500 text-white py-3 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300"
+                >
+                    Pay
+                </button> */}
                 <p className='text-red-500'>{error}</p>
                 {transactionId && <p className='text-green-500 mt-3'>tnxId: {transactionId}</p>}
             </form>
+            
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

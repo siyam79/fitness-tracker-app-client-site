@@ -40,8 +40,6 @@ const AppliedTrainer = () => {
                         position: 'top-center'
 
                     })
-
-
                 }
             })
 
@@ -132,7 +130,7 @@ const AppliedTrainer = () => {
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"></button>
                         <input className="hidden" type="text" defaultValue={data.name} name="name" />
                         <input className="hidden" type="email" defaultValue={data.email} name="email" />
-                        <button type="submit" className="badge badge-outline px-4 py-3 mt-6 ">Reject</button>
+                        <button type="submit" className="badge badge-outline ml-[370px] mb-4 px-4 py-3 mt-6 ">Reject</button>
                     </form>
 
                     <div className="card-actions justify-end cursor-pointer">

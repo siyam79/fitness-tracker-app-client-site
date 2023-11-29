@@ -42,12 +42,18 @@ const AllTrainers = () => {
                                     <td>{trainer.trainerName}</td>
                                     <td>{trainer.email}</td>
                                     <td>{trainer.salary}</td>
-                                    <td>{trainer.status}</td>
-                                    <td> <Link to={`/dashboard/pyment/${trainer._id}/${trainer.salary}`}>
-                                        <button className="rounded bg-green-500 px-5 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white ">
+                                    <td className=" uppercase font-semibold">{trainer.status}</td>
+                                    <td> <Link to={`/dashboard/pyment/${trainer._id}/${trainer.salary}/${trainer.status}`}>
+                                        <button className="rounded bg-green-500 px-5 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal w-[100px] text-white ">
                                             Pay ${trainer.salary}
                                         </button>
                                     </Link> </td>
+
+                                    {/* <td> <Link to={`/dashboard/pyment/${trainer._id}/${trainer.salary}`}>
+                                        <button className="rounded bg-green-500 px-5 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white ">
+                                            Pay ${trainer.salary}
+                                        </button>
+                                    </Link> </td> */}
 
                                     {/* <td><Link to='/dashboard/pyment'><button className="badge badge-outline py-3 px-4 ">Pyment</button></Link> </td> */}
 
