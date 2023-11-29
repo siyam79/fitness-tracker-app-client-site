@@ -1,17 +1,15 @@
-import usePayments from '../../../Hooks/usePayments';
-// import React, { PureComponent } from 'react';
+import useSubscriber from '../../../Hooks/useSubscriber';
+
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
-import SubscriberPaiChart from './SubscriberPaiChart';
-// import useSubscriber from '../../../Hooks/useSubscriber';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
 
 
 
-const Balance = () => {
-    const [paymentHistory] = usePayments()
-    console.log(paymentHistory);
+const SubscriberPaiChart = () => {
+    const [allSubscriber] = useSubscriber()
+    console.log(allSubscriber);
 
     // const [allSubscriber] = useSubscriber()
 
@@ -21,28 +19,22 @@ const Balance = () => {
         C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${x + width}, ${y + height}
         Z`;
     };
+
     const TriangleBar = (props) => {
         const { fill, x, y, width, height } = props;
 
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
     };
 
-
-
-
-
     return (
-        <div >
-            <div className=' flex items-center justify-between '>
-                <h1 className=' mb-10 font-semibold text-xl '>Payment Histroy PaiChart  </h1>
-                <h1 className=' mb-10 font-semibold text-xl '> NewsLetter Subscriber PaiChart  </h1>
-            </div>
-            <div className='flex '>
+        <div>
+
+            <div className=' max-w-md '>
                 <div>
                     <BarChart
                         width={500}
                         height={300}
-                        data={paymentHistory}
+                        data={allSubscriber}
                         margin={{
                             top: 20,
                             right: 30,
@@ -51,21 +43,21 @@ const Balance = () => {
                         }}
                     >
                         <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="money" />
-                        <YAxis dataKey="money" />
-                        <Bar dataKey="money" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-                            {paymentHistory.map((entry, index) => (
+                        <XAxis dataKey="number" />
+                        <YAxis dataKey="number" />
+                        <Bar dataKey="number" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                            {allSubscriber.map((entry, index) => (
                                 <Cell key={`cell-${index}`} fill={colors[index % 20]} />
                             ))}
                         </Bar>
                     </BarChart>
                 </div>
                 <div>
-                    <SubscriberPaiChart></SubscriberPaiChart>
+
                 </div>
             </div>
         </div>
     );
 };
 
-export default Balance;
+export default SubscriberPaiChart;

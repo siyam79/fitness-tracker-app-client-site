@@ -1,7 +1,7 @@
 import  { useState, useEffect} from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import axios from 'axios';
-// import useAuth from '../../../Hooks/useAuth';
+import useAuth from '../../../Hooks/useAuth';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import PropTypes from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
@@ -13,8 +13,8 @@ const CheckoutForm = ({ salary, trainerId }) => {
     const [error, setError] = useState('');
     const stripe = useStripe();
     const [transactionId, setTransactionId] = useState('');
-    // const {user} = useAuth()
-    // console.log(user.email);
+    const {user} = useAuth()
+    console.log(user.email);
 
     const [clientSecret, setClientSecret] = useState();
     const elements = useElements();
@@ -100,18 +100,22 @@ if (paymentIntent) {
 }
 
 
-            // const payment = {
-            //     email: user?.email,
-            //     money: salary,
-            //     transactionId: paymentIntent.id,
-            //     id: trainerId,
-            //     date: new Date(),
-            //     status: paymentIntent.status
-            // }
-            // axiosSecure.post('/paymentHistory', payment);
-            // console.log(res=>{
-            //     console.log(res.data);
-            // });
+//  data base payment history add 
+
+
+            const payment = {
+                email: user?.email,
+                money: salary,
+                transactionId: paymentIntent.id,
+                id: trainerId,
+                date: new Date(),
+                status: "success"
+            }
+           const res = await axiosSecure.post('/paymentHistory', payment);
+           console.log('payments Save ' , res.data);
+        //     console.log(res=>{
+        //         console.log(res.data);
+        //     });
         }
     };
 

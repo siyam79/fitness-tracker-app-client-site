@@ -45,7 +45,7 @@ const AddForum = () => {
                     <div className=" lg:flex gap-4 ">
                         <div className="mb-4  w-full ">
                             <label className="block  text-md font-semibold mb-2 " htmlFor="">Title Name</label>
-                            <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder=" Your Name " name="title" required />
+                            <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder=" Post Title Name " name="title" required />
                         </div>
                         <div className="mb-4  w-full ">
                             <label className="block  text-md font-semibold mb-2 " htmlFor="">Your Email </label>
@@ -64,6 +64,7 @@ const AddForum = () => {
                     <div className=" text-center justify-center  pb-6 ">
                         <button type="submit" className=" w-40 rounded-lg  text-white bg-pink-800 hover:bg-pink-500 py-2 ">Faroum Add </button>
                     </div>
+                   
                 </form>
             </div>
             <ToastContainer></ToastContainer>

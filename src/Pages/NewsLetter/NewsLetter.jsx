@@ -19,7 +19,8 @@ const NewsLetter = () => {
 
         const newsLetter = {
             name,
-            email
+            email,
+            number:"20"
         };
         console.log(newsLetter);
 

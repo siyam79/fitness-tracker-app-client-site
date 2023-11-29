@@ -33,21 +33,21 @@ const Dashboard = () => {
                 </h1>
                 <ul className="menu p-2 py-4">
 
-
                     {
                         isAdmin[0] && (<div>
                             <li className="font-bold text-xl"><NavLink to="/dashboard/allSubscribers">All subscribers</NavLink></li>
                             <li className="font-bold text-xl"><NavLink to="/dashboard/allTrainers">All Trainers</NavLink></li>
                             <li className="font-bold text-xl"><NavLink to="/dashboard/appliedTrainers">Applied Trainer</NavLink></li>
-                            <li className="font-bold text-xl"><NavLink to="/dashboard/paymentHistory">Payment </NavLink></li>
+                            <li className="font-bold text-xl"><NavLink to="/dashboard/paymentHistory">Payment History </NavLink></li>
                             <li className="font-bold text-xl"><NavLink to="/dashboard/balance"> Balace </NavLink></li>
+                            <li className="font-bold text-xl"><NavLink to="/dashboard/addForum">Add Forum</NavLink></li>
 
                         </div>)
 
-
                     }
+
                     {
-                        isTrainer[0] ? (
+                        isTrainer[0] && (
                             <div>
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/manageMember">Manage Member</NavLink></li>
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/manageSlot">Manage Slot</NavLink></li>
@@ -55,12 +55,29 @@ const Dashboard = () => {
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/addClass"> Add Class </NavLink></li>
                             </div>
                         )
-                            :
+
+
+                    }
+                    {
+                        (!isAdmin[0] || !isTrainer[0]) ? <>
                             <div>
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/activeLog">Activity Log</NavLink></li>
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/profile"> Profile </NavLink></li>
                             </div>
+                        </> :
+                            // <div>
+                            //     <li className="font-bold text-xl"><NavLink to="/dashboard/activeLog">Activity Log</NavLink></li>
+                            //     <li className="font-bold text-xl"><NavLink to="/dashboard/profile"> Profile </NavLink></li>
+                            // </div>
+                            <> </>
                     }
+                    {/* {
+                        !isAdmin[0] || !isTrainer[0] ? <>
+                        </> : <div>
+                            <li className="font-bold text-xl"><NavLink to="/dashboard/activeLog">Activity Log</NavLink></li>
+                            <li className="font-bold text-xl"><NavLink to="/dashboard/profile"> Profile </NavLink></li>
+                        </div>
+                    } */}
 
 
                     <div className="divider"></div>
