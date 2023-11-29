@@ -221,10 +221,7 @@ const BeATainer = () => {
                                 <label className="block  text-md font-semibold mb-2 " htmlFor=""> Years Of Experience </label>
                                 <textarea className=" bg-gray-800 w-full px-4 py-2 text-white border rounded-lg  focus:outline-none focus:border-blue-500 " name="exprience" id="" placeholder=" Years Of Experience....  " cols="20" rows="6"></textarea>
                             </div>
-
-
                         </div>
-
 
                         <div className=" text-center justify-center  pb-6 ">
                             <button type="submit" className=" w-40 rounded-lg  text-white bg-pink-800 hover:bg-pink-500 py-2 ">Applay Now</button>

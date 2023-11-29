@@ -2,11 +2,13 @@
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../../Hooks/useAdmin";
 import useIsTrainer from "../../Hooks/useIsTrainer";
+import useAuth from "../../Hooks/useAuth";
 // import useTrainers from "../../Hooks/useTrainers";
 
 
 const Dashboard = () => {
 
+    const { user } = useAuth()
     // const useAdmin = () => [true];
     // const useTrainers = () => [true]
 
@@ -21,8 +23,14 @@ const Dashboard = () => {
     return (
         <div className=" flex w-[95%] mx-auto mt-1 ">
 
-            <div className="w-64 min-h-screen bg-cyan-500 rounded-sm py-6">
 
+            <div className="w-64 min-h-screen bg-cyan-500 rounded-sm pt-1">
+                <div className=" w-60 ">
+                    <img className=" w-24 rounded-full  mx-auto " src={user?.photoURL} alt="" />
+                </div>
+                <h1 className="text-center text-lg font-bold  ">
+                    {user?.displayName}
+                </h1>
                 <ul className="menu p-2 py-4">
 
 
@@ -47,7 +55,7 @@ const Dashboard = () => {
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/addClass"> Add Class </NavLink></li>
                             </div>
                         )
-                            : 
+                            :
                             <div>
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/activeLog">Activity Log</NavLink></li>
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/profile"> Profile </NavLink></li>
