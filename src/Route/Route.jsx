@@ -30,6 +30,7 @@ import TrainerBoking from "../Pages/TreinerBoking/TrainerBoking";
 import Payment from "../Payment/Payment";
 import Classes from "../Components/Classes/Classes";
 import ProfileUpdate from "../Pages/Member/ProfileUpdate/ProfileUpdate";
+import RecomentClass from "../Pages/Member/RecomentClass/RecomentClass";
 
 const Route = createBrowserRouter([
     {
@@ -68,13 +69,13 @@ const Route = createBrowserRouter([
             {
                 path: '/trainerboking/:timeSlot/:trainerName',
                 element: <PrivateRoute><TrainerBoking></TrainerBoking></PrivateRoute>,
-                // loader : ({params})=> fetch(`http://localhost:5000/class/${params.id}`)
+                // loader : ({params})=> fetch(`https://n-three-vert.vercel.app/class/${params.id}`)
             },
 
             // {
             //     path:'/class/:id',
             //     element :<ClassDetails></ClassDetails>,
-            //     loader : ({params})=> fetch(`http://localhost:5000/class/${params.id}`)
+            //     loader : ({params})=> fetch(`https://n-three-vert.vercel.app/class/${params.id}`)
             // },
 
             {
@@ -84,7 +85,7 @@ const Route = createBrowserRouter([
             {
                 path: '/trainer/:id',
                 element: <TrainerDetails></TrainerDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/trainers/${params.id}`)
+                loader: ({ params }) => fetch(`https://n-three-vert.vercel.app/trainers/${params.id}`)
             },
             {
                 path: '/beATainer',
@@ -157,6 +158,10 @@ const Route = createBrowserRouter([
             {
                 path: 'profile',
                 element:<Profile></Profile>
+            },
+            {
+                path: 'recoment',
+                element:<RecomentClass></RecomentClass>
             },
         ]
     },

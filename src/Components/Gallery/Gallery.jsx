@@ -26,7 +26,7 @@ const Gallery = () => {
         setLoading(true);
 
         axios
-            .get('http://localhost:5000/infinityImg', {
+            .get('https://n-three-vert.vercel.app/infinityImg', {
                 params: {
                     page: activePage,
                     size: LIMIT,

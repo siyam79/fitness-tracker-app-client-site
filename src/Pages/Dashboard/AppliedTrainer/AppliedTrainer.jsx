@@ -44,7 +44,7 @@ const AppliedTrainer = () => {
 
 
 
-        // fetch(`http://localhost:5000/users?id=${id}`,
+        // fetch(`https://n-three-vert.vercel.app/users?id=${id}`,
         //     {
         //         method: "PATCH",
         //     })

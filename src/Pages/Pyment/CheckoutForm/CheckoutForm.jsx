@@ -31,7 +31,7 @@ const CheckoutForm = ({ salary, trainerId }) => {
                     return;
                 }
 
-                const response = await axios.post('http://localhost:5000/create-payment-intent', {
+                const response = await axios.post('https://n-three-vert.vercel.app/create-payment-intent', {
                     price: parsedSalary,
                     trainerId
                 });

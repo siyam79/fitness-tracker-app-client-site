@@ -64,6 +64,7 @@ const Dashboard = () => {
                                         <div>
                                             <li className="font-bold text-xl"><NavLink to="/dashboard/profile"> Profile </NavLink></li>
                                             <li className="font-bold text-xl"><NavLink to="/dashboard/activeLog">Activity Log</NavLink></li>
+                                            <li className="font-bold text-xl"><NavLink to="/dashboard/recoment"> Recoment Class </NavLink></li>
 
                                         </div>
                                 }</>

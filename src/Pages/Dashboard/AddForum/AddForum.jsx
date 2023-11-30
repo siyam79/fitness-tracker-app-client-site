@@ -16,9 +16,9 @@ const AddForum = () => {
         const title = form.title.value;
         const name = form.name.value;
         const forum = form.forum.value;
-
+       
         const forumInfo = {
-            email, title, name, forum
+            email, title, name, forum , likedBy : '', likes : 0
         }
         axiosSecure.post('/forum', forumInfo)
             .then(res => {
@@ -59,8 +59,8 @@ const AddForum = () => {
                             <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder="" readOnly defaultValue={user?.displayName} name="name" required />
                         </div>
                     </div>
-                   
-                   
+
+
                     <div className="mb-4 ">
                         <label className="block  text-md font-semibold mb-2 " htmlFor=""> Your Faroums  </label>
                         <textarea className=" bg-gray-800 w-full px-4 py-2 text-white border rounded-lg  focus:outline-none focus:border-blue-500 " name="forum" id="" placeholder=" Years Of faroums....  " cols="20" rows="6"></textarea>

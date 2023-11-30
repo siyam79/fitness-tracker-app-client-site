@@ -1,25 +1,43 @@
-import { useEffect, useState } from "react";
-import useForum from "../../Hooks/useForum";
-import { GrDislike, GrLike } from "react-icons/gr";
-const Community = () => {
-    const [likeCount, setLikeCount] = useState(0);
-    const [dislikeCount, setDislikeCount] = useState(0);
 
-    const [forum] = useForum()
+import { useEffect } from "react";
+import useForum from "../../Hooks/useForum";
+import {  GrLike } from "react-icons/gr";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import useAuth from "../../Hooks/useAuth";
+import { toast } from "react-toastify";
+const Community = () => {
+
+    const {user} = useAuth()
+    const axiosPublic = useAxiosPublic()
+    // const [likeCount, setLikeCount] = useState(0);
+   
+
+    const [forum , refetch] = useForum()
     console.log(forum);
 
-    const handleLike = () => {
-        setLikeCount(likeCount + 1);
-    };
-    const handleDislike = () => {
-        setDislikeCount(dislikeCount + 1);
+
+
+
+
+    const handleLike = async (_id) => {
+        // setLikeCount(likeCount + 1);
+        if(user){
+            console.log(_id);
+            const res = await axiosPublic.put(`/forums/${_id}`, {email:user?.email})
+            console.log(res.data);
+           
+            refetch({})
+          }else{
+            toast.warning("Please login first!", {autoClose:1000})
+          }
     };
 
+ 
 
 
 
     useEffect(() => {
-        document.title = " Fitness-Tracker | Community";
+        document.title = "Fitness-Tracker | Community";
     }, []);
     return (
         <div>
@@ -34,36 +52,16 @@ const Community = () => {
 
 
                             <div className=" flex items-center gap-14 ">
-                                <div className="badge ">{likeCount}</div>
-                                <div className="badge">{dislikeCount}</div>
+                                {/* <div className="badge ">{likeCount}</div> */}
+                                <h1>{item.likes} </h1>
+
+
                             </div>
                             <div className="flex items-center gap-6">
                                 <div className="card-actions ">
-                                    <button onClick={handleLike} className="btn"><GrLike></GrLike> </button>
-                                </div>
-                                <div className="card-actions ">
-                                    <button onClick={handleDislike} className="btn"><GrDislike /> </button>
+                                    <button onClick={()=> handleLike(item._id)} className="btn"><GrLike></GrLike> </button>
                                 </div>
                             </div>
-
-
-
-
-                            {/* 
-                            <button
-                                className="btn btn-sm bg-blue-600 text-white"
-                                onClick={handleLike}
-                            >
-                                <FaThumbsUp className="text-white"></FaThumbsUp>
-                                <div className="badge badge-secondary">{likeCount}</div>
-                            </button>
-                            <button
-                                className="btn btn-sm bg-red-300 text-white"
-                                onClick={handleDislike}
-                            >
-                                <FaThumbsUp className="transform rotate-180"></FaThumbsUp>
-                                <div className="badge">{dislikeCount}</div>
-                            </button> */}
                         </div>
                     </div>)
                 }

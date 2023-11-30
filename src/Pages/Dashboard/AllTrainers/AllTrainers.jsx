@@ -13,7 +13,7 @@ const AllTrainers = () => {
     // console.log(trainers);
     // useEffect(() => {
     //     axios
-    //         .get("http://localhost:5000/roleTrainer?role=trainer")
+    //         .get("https://n-three-vert.vercel.app/roleTrainer?role=trainer")
     //         .then((res) => res.data)
     //         .then((data) => setTrainers(data))
     //         .catch((error) => console.error("Error fetching data:", error));
