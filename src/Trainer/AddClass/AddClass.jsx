@@ -1,5 +1,6 @@
 import { ToastContainer, toast } from "react-toastify";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { useEffect } from "react";
 
 const AddClass = () => {
     const axiosSecure = useAxiosSecure()
@@ -34,6 +35,10 @@ const AddClass = () => {
 
 
     }
+
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Add-Class";
+    }, []);
 
     return (
         <div>

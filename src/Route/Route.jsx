@@ -3,7 +3,6 @@ import MainLayOut from "../Pages/MainLayOute/MainLayOut";
 import Home from "../Components/Home/Home";
 import Gallery from "../Components/Gallery/Gallery";
 import Trainer from "../Components/Trainer/Trainer";
-import Classes from "../Components/Classes/Classes";
 import Login from "../Components/Login/Login";
 import Register from "../Components/Login/Register";
 import Community from "../Components/Community/Community";
@@ -27,6 +26,9 @@ import Profile from "../Pages/Member/Profile/Profile";
 import AdminRoute from "../Pages/Dashboard/AdminRoute/AdminRoute";
 import TrainerRoute from "../TrainerRoute/TrainerRoute";
 import DualRoute from "../DualRoute/DualRoute";
+import TrainerBoking from "../Pages/TreinerBoking/TrainerBoking";
+import Payment from "../Payment/Payment";
+import Classes from "../Components/Classes/Classes";
 
 const Route = createBrowserRouter([
     {
@@ -47,8 +49,20 @@ const Route = createBrowserRouter([
                 element: <Trainer></Trainer>
             },
             {
+                path: '/payment',
+                element: <Payment></Payment>
+            },
+            {
+                path: '/trainer',
+                element: <Trainer></Trainer>
+            },
+            {
                 path: '/classes',
-                element: <Classes></Classes>,
+                element: <Classes></Classes>
+            },
+            {
+                path: '/trainerboking/:timeSlot/:trainerName',
+                element: <PrivateRoute><TrainerBoking></TrainerBoking></PrivateRoute>,
                 // loader : ({params})=> fetch(`http://localhost:5000/class/${params.id}`)
             },
 

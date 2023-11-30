@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
 import useCLass from "../../../Hooks/useCLass";
+import { useEffect } from "react";
 
 
 const FeaturedClass = () => {
     const [allClass] = useCLass()
     console.log(allClass);
     const data = allClass.slice(0, 6)
+
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Featured-Class";
+    }, []);
     return (
         <div>
             <div>

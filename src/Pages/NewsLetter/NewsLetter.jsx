@@ -45,8 +45,9 @@ const NewsLetter = () => {
     }, []);
     return (
         <section id="contact" className=" py-4 px-3 ">
+              <h3 className="text-2xl font-semibold text-center mb-4 gont-bold uppercase "> Subscribe Now</h3>
             <div className=" text-center lg:flex items-center justify-center gap-5  ">
-                {/* <h3 className="text-2xl font-semibold"> News Letter <span className=" text-pink-600">Me</span>  </h3> */}
+              
                 {/* <p className="text-pink-600 mt-3 text-lg ">Get In Touch</p> */}
                 <div className="  flex md:flex-row flex-col gap-6 mx-w-5xl bg-slate-900   md:p-6 p-2 lg:w-1/2 rounded-lg h-[400px] ">
                     <form onSubmit={handleNewsLetter} className=" flex flex-col flex-1 gap-5 ">

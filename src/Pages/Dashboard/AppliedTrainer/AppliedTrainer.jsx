@@ -1,6 +1,6 @@
 import useMember from "../../../Hooks/useMember";
 import { FaRegEye } from "react-icons/fa";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import useAuth from "../../../Hooks/useAuth";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
@@ -60,7 +60,9 @@ const AppliedTrainer = () => {
         //         console.error("Error making user admin:", error);
         //     });
     };
-
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Applied-Trainer";
+    }, []);
 
     return (
         <>

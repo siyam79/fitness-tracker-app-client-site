@@ -18,7 +18,9 @@ const FeaturedSection = () => {
         AOS.init({ duration: "2000" });
 
     }, []);
-
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Featured-Section";
+    }, []);
 
     return (
         <div>

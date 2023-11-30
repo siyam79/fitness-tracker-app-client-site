@@ -1,6 +1,7 @@
 import { ToastContainer, toast } from "react-toastify";
 import useAuth from "../../../Hooks/useAuth";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { useEffect } from "react";
 
 const AddForum = () => {
 
@@ -36,7 +37,9 @@ const AddForum = () => {
 
     }
 
-
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Add-Forum";
+    }, []);
 
     return (
         <div>

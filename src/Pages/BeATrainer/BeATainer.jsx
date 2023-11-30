@@ -1,6 +1,7 @@
 import { ToastContainer, toast } from "react-toastify";
 import useAuth from "../../Hooks/useAuth";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { useEffect } from "react";
 // import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 
@@ -96,6 +97,10 @@ const BeATainer = () => {
                 }
             })
     }
+
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Be-Trainer";
+    }, []);
     return (
         <div>
             <div>

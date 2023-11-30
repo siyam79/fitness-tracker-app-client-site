@@ -1,8 +1,15 @@
+import { useEffect } from "react";
 import usePayments from "../../../Hooks/usePayments";
 
 const PaymentHistory = () => {
     const [paymentHistory] = usePayments()
     console.log(paymentHistory);
+
+
+
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Payment-History";
+    }, []);
     return (
         <div>
             <div className="overflow-x-auto">

@@ -1,5 +1,12 @@
+import { useEffect } from "react";
 
 const About = () => {
+
+
+
+    useEffect(() => {
+        document.title = " Fitness-Tracker | About";
+    }, []);
     return (
         <div>
             <div className="mx-w-[1100px] mx-auto grid lg:grid-cols-2 gap-4  py-10 px-4 ">
@@ -25,5 +32,6 @@ const About = () => {
         </div>
     );
 };
+
 
 export default About;

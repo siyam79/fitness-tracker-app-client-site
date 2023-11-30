@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
+
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Error";
+    }, []);
     return (
         <div>
             <div className="flex items-center justify-center ">

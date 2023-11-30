@@ -52,7 +52,7 @@ const Login = () => {
 
     }
     useEffect(() => {
-        document.title = " Job Search | Login ";
+        document.title = " Fitness-Tracker | Login ";
     }, []);
 
     return (

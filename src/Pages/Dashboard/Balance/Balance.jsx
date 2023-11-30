@@ -2,6 +2,7 @@ import usePayments from '../../../Hooks/usePayments';
 // import React, { PureComponent } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import SubscriberPaiChart from './SubscriberPaiChart';
+import { useEffect } from 'react';
 // import { useState } from 'react';
 // import useSubscriber from '../../../Hooks/useSubscriber';
 
@@ -34,7 +35,9 @@ const Balance = () => {
 
 
 
-
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Balance-Chart";
+    }, []);
     return (
         <div >
 

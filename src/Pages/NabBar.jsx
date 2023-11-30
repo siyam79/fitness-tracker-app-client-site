@@ -1,6 +1,6 @@
 
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import logo from "../assets/img/logo-removebg-preview (1).png"
 
@@ -52,7 +52,9 @@ const NabBar = () => {
         )}
 
     </>
-
+useEffect(() => {
+    document.title = " Fitness-Tracker | Navbar";
+}, []);
 
     return (
         <div>

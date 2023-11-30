@@ -56,7 +56,9 @@ const Gallery = () => {
     }, []);
 
 
-
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Gallery";
+    }, []);
 
     return (
         <div>

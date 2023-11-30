@@ -18,6 +18,11 @@ const Trainer = () => {
         AOS.init({ duration: "2000" });
 
     }, []);
+
+
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Trainer";
+    }, []);
     return (
         <div>
             <div className=" text-center py-10  ">

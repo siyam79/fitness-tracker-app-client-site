@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import useTrainers from "../../Hooks/useTrainers";
+import { useEffect } from "react";
 
 const TeamSection = () => {
     const [trainer] = useTrainers()
 
     const data = trainer.slice(0, 3)
     console.log(data);
+
+
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Team-Section";
+    }, []);
     return (
         <div className=" w-[95%] mx-auto ">
             <h1> team </h1>

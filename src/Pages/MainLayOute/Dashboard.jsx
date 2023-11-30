@@ -3,6 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../../Hooks/useAdmin";
 import useIsTrainer from "../../Hooks/useIsTrainer";
 import useAuth from "../../Hooks/useAuth";
+import { useEffect } from "react";
 // import useTrainers from "../../Hooks/useTrainers";
 
 
@@ -19,7 +20,9 @@ const Dashboard = () => {
 
     console.log(isTrainer[0]);
 
-
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Dash-Board";
+    }, []);
     return (
         <div className=" flex w-[95%] mx-auto mt-1 ">
 
@@ -34,7 +37,7 @@ const Dashboard = () => {
                 <ul className="menu p-2 py-4">
 
                     {
-                        isAdmin[0] && (<div>
+                        isAdmin[0] ? (<div>
                             <li className="font-bold text-xl"><NavLink to="/dashboard/allSubscribers">All subscribers</NavLink></li>
                             <li className="font-bold text-xl"><NavLink to="/dashboard/allTrainers">All Trainers</NavLink></li>
                             <li className="font-bold text-xl"><NavLink to="/dashboard/appliedTrainers">Applied Trainer</NavLink></li>
@@ -44,10 +47,31 @@ const Dashboard = () => {
 
                         </div>)
 
+
+                            :
+
+                            <>
+                                {
+                                    isTrainer[0] ? (
+                                        <div>
+                                            <li className="font-bold text-xl"><NavLink to="/dashboard/manageMember">Manage Member</NavLink></li>
+                                            <li className="font-bold text-xl"><NavLink to="/dashboard/manageSlot">Manage Slot</NavLink></li>
+                                            <li className="font-bold text-xl"><NavLink to="/dashboard/addForum">Add Forum</NavLink></li>
+                                            <li className="font-bold text-xl"><NavLink to="/dashboard/addClass"> Add Class </NavLink></li>
+                                        </div>
+                                    )
+                                        :
+                                        <div>
+                                            <li className="font-bold text-xl"><NavLink to="/dashboard/profile"> Profile </NavLink></li>
+                                            <li className="font-bold text-xl"><NavLink to="/dashboard/activeLog">Activity Log</NavLink></li>
+
+                                        </div>
+                                }</>
+
                     }
 
-                    {
-                        isTrainer[0] && (
+                    {/* {
+                        isTrainer[0] ? (
                             <div>
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/manageMember">Manage Member</NavLink></li>
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/manageSlot">Manage Slot</NavLink></li>
@@ -55,30 +79,20 @@ const Dashboard = () => {
                                 <li className="font-bold text-xl"><NavLink to="/dashboard/addClass"> Add Class </NavLink></li>
                             </div>
                         )
-
-
-                    }
-                    {
-                        (!isAdmin[0] || !isTrainer[0]) ? <>
+                            :
                             <div>
-                                <li className="font-bold text-xl"><NavLink to="/dashboard/profile"> Profile </NavLink></li>
-                                <li className="font-bold text-xl"><NavLink to="/dashboard/activeLog">Activity Log</NavLink></li>
-                               
-                            </div>
-                        </> :
-                            // <div>
-                            //     <li className="font-bold text-xl"><NavLink to="/dashboard/activeLog">Activity Log</NavLink></li>
-                            //     <li className="font-bold text-xl"><NavLink to="/dashboard/profile"> Profile </NavLink></li>
-                            // </div>
-                            <> </>
-                    }
-                    {/* {
-                        !isAdmin[0] || !isTrainer[0] ? <>
-                        </> : <div>
-                            <li className="font-bold text-xl"><NavLink to="/dashboard/activeLog">Activity Log</NavLink></li>
                             <li className="font-bold text-xl"><NavLink to="/dashboard/profile"> Profile </NavLink></li>
+                            <li className="font-bold text-xl"><NavLink to="/dashboard/activeLog">Activity Log</NavLink></li>
+    
                         </div>
                     } */}
+
+
+
+
+
+
+
 
 
                     <div className="divider"></div>

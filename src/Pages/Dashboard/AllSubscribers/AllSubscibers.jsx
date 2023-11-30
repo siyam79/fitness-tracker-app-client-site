@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import useSubscriber from "../../../Hooks/useSubscriber";
 
 
@@ -6,7 +7,9 @@ const AllSubscibers = () => {
     const [allSubscriber] = useSubscriber()
 
 
-
+    useEffect(() => {
+        document.title = " Fitness-Tracker | All-Subscriber";
+    }, []);
     return (
         <div>
 

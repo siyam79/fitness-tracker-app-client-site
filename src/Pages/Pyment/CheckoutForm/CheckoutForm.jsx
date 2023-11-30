@@ -130,7 +130,9 @@ if (paymentIntent) {
         //     });
         }
     };
-
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Checkout-Form";
+    }, []);
     return (
         <div className="flex items-center justify-center h-screen">
             <form

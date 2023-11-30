@@ -13,7 +13,9 @@ const Testmonial = () => {
     }, [])
     console.log(data);
 
-
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Test-Monial";
+    }, []);
 
     return (
         <div>

@@ -2,7 +2,12 @@
 
 import { Link } from "react-router-dom";
 import { BiChevronsDown  } from "react-icons/bi";
+import { useEffect } from "react";
 const Banner = () => {
+
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Banner";
+    }, []);
     return (
         <div className="">
             <div className="hero min-h-screen " style={{ backgroundImage: 'url("https://i.ibb.co/0YpVGkw/valery-sysoev-LDAir-ERNzew-unsplash.jpg")' }}>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import useAllTainers from "../../../Hooks/useAllTainers"
 import useTrainers from "../../../Hooks/useTrainers";
+import { useEffect } from "react";
 // import { useEffect, useState } from "react";
 // import axios from "axios";
 
@@ -17,7 +18,9 @@ const AllTrainers = () => {
     //         .then((data) => setTrainers(data))
     //         .catch((error) => console.error("Error fetching data:", error));
     // }, []);
-
+    useEffect(() => {
+        document.title = " Fitness-Tracker | All-Trainer";
+    }, []);
     return (
         <div>
             <div className="">

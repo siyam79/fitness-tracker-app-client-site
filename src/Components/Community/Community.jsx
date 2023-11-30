@@ -1,9 +1,19 @@
+import { useEffect } from "react";
 import useForum from "../../Hooks/useForum";
 
 const Community = () => {
 
     const [forum] = useForum()
     console.log(forum);
+
+
+
+
+
+
+    useEffect(() => {
+        document.title = " Fitness-Tracker | Community";
+    }, []);
     return (
         <div>
             <div>
