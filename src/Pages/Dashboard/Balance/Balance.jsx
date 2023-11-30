@@ -2,6 +2,7 @@ import usePayments from '../../../Hooks/usePayments';
 // import React, { PureComponent } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import SubscriberPaiChart from './SubscriberPaiChart';
+// import { useState } from 'react';
 // import useSubscriber from '../../../Hooks/useSubscriber';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
@@ -10,10 +11,13 @@ const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
 
 const Balance = () => {
-    const [paymentHistory] = usePayments()
-    console.log(paymentHistory);
 
-    // const [allSubscriber] = useSubscriber()
+    
+    const [paymentHistory] = usePayments()
+    const totalSalary = paymentHistory.reduce((total, item) => total + parseFloat(item.money), 0);
+    const salary = parseFloat(totalSalary);
+ 
+
 
     const getPath = (x, y, width, height) => {
         return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
@@ -33,6 +37,10 @@ const Balance = () => {
 
     return (
         <div >
+
+            <div>
+                <h1 className='text-2xl font-semibold '>Total Payment   <span className='text-2xl font-bold '>${salary}</span> </h1>
+            </div>
             <div className=' flex items-center justify-between '>
                 <h1 className=' mb-10 font-semibold text-xl '>Payment Histroy PaiChart  </h1>
                 <h1 className=' mb-10 font-semibold text-xl '> NewsLetter Subscriber PaiChart  </h1>

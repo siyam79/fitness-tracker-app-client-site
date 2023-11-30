@@ -56,6 +56,8 @@ const AddForum = () => {
                             <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder="" readOnly defaultValue={user?.displayName} name="name" required />
                         </div>
                     </div>
+                   
+                   
                     <div className="mb-4 ">
                         <label className="block  text-md font-semibold mb-2 " htmlFor=""> Your Faroums  </label>
                         <textarea className=" bg-gray-800 w-full px-4 py-2 text-white border rounded-lg  focus:outline-none focus:border-blue-500 " name="forum" id="" placeholder=" Years Of faroums....  " cols="20" rows="6"></textarea>
@@ -64,7 +66,7 @@ const AddForum = () => {
                     <div className=" text-center justify-center  pb-6 ">
                         <button type="submit" className=" w-40 rounded-lg  text-white bg-pink-800 hover:bg-pink-500 py-2 ">Faroum Add </button>
                     </div>
-                   
+
                 </form>
             </div>
             <ToastContainer></ToastContainer>

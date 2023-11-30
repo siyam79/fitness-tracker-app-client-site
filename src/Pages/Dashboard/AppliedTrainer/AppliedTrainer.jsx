@@ -18,7 +18,6 @@ const AppliedTrainer = () => {
     console.log(data);
     console.log(form.current);
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_arqd66f', 'template_x4irtjj', form.current, 'wGhNocP42LwdM_W5a')
@@ -93,13 +92,6 @@ const AppliedTrainer = () => {
                                     }}><FaRegEye className="text-2xl "></FaRegEye></button>
 
                                 </td>
-
-
-
-                                {/* <td>  <Link> <button className="" onClick={async () => {
-                                    await setData(item)
-                                    document.getElementById('my_modal_3').showModal()
-                                }}><FaRegEye className="text-2xl "></FaRegEye></button></Link></td> */}
                             </tr>)}
                         </tbody>
                     </table>
@@ -145,28 +137,6 @@ const AppliedTrainer = () => {
                     </div>
                 </div>
             </dialog>
-
-
-
-
-
-
-
-            {/* <dialog id="my_modal_3" className="modal">
-                <div className="modal-box mt-10 ">
-                    <form ref={form} onSubmit={handleSubmit} method="dialog">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                        <input type="text" defaultValue={data.name} name="name" />
-                        <input type="email" defaultValue={data.email} name="email" />
-                        <button type="submit" className="badge badge-outline">Reject</button>
-                    </form>
-
-                    <div className="card-actions justify-end cursor-pointer">
-                        <button onClick={() => hendleMakeTrainer(data._id)} className="badge badge-outline">Confirm</button>
-
-                    </div>
-                </div>
-            </dialog> */}
 
             <ToastContainer></ToastContainer>
 

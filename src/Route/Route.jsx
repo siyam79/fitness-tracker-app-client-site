@@ -26,6 +26,7 @@ import ActiveLog from "../Member/ActiveLog/ActiveLog";
 import Profile from "../Pages/Member/Profile/Profile";
 import AdminRoute from "../Pages/Dashboard/AdminRoute/AdminRoute";
 import TrainerRoute from "../TrainerRoute/TrainerRoute";
+import DualRoute from "../DualRoute/DualRoute";
 
 const Route = createBrowserRouter([
     {
@@ -105,10 +106,7 @@ const Route = createBrowserRouter([
                 path: '/dashboard/pyment/:_id/:salary/:status',
                 element:<AdminRoute><Pyment></Pyment></AdminRoute>
             },
-            // {
-            //     path: '/dashboard/pyment/:_id/:salary',
-            //     element: <Pyment></Pyment>
-            // },
+            
             {
                 path: 'paymentHistory',
                 element:<AdminRoute> <PaymentHistory></PaymentHistory></AdminRoute>
@@ -121,7 +119,7 @@ const Route = createBrowserRouter([
             },
             {
                 path: 'addForum',
-                element:<TrainerRoute><AddForum></AddForum></TrainerRoute> ,
+                element:<DualRoute><AddForum></AddForum></DualRoute> ,
             },
             {
                 path: 'manageSlot',

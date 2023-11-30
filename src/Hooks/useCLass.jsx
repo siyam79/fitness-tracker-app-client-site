@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
+// import useAxiosPublic from "./useAxiosPublic";
 import useAxiosSecure from "./useAxiosSecure";
 
 const useCLass = () => {
-    
     const axiosSecure = useAxiosSecure()
+    
     const { data: allClass = [] } = useQuery({
         queryKey: ["allClass"],
         queryFn: async () => {

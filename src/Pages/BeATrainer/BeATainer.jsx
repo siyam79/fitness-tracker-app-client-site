@@ -95,8 +95,6 @@ const BeATainer = () => {
                     form.reset()
                 }
             })
-
-
     }
     return (
         <div>
