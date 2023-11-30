@@ -29,6 +29,7 @@ import DualRoute from "../DualRoute/DualRoute";
 import TrainerBoking from "../Pages/TreinerBoking/TrainerBoking";
 import Payment from "../Payment/Payment";
 import Classes from "../Components/Classes/Classes";
+import ProfileUpdate from "../Pages/Member/ProfileUpdate/ProfileUpdate";
 
 const Route = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const Route = createBrowserRouter([
             {
                 path: '/gallery',
                 element: <Gallery></Gallery>
+            },
+            {
+                path: '/updateProFile/:id',
+                element: <ProfileUpdate></ProfileUpdate>
             },
             {
                 path: '/trainer',

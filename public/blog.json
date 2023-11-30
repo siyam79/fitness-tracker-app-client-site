@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Daily Steps",
+        "details": "Track the number of steps you take each day to ensure you meet your daily activity goals."
+    },
+    {
+        "id": 2,
+        "title": "Calories Burned",
+        "details": "Monitor the calories burned during your workouts and daily activities to manage your energy balance."
+    },
+    {
+        "id": 3,
+        "title": "Distance Covered",
+        "details": "Keep track of the distance you cover while walking, running, or engaging in other physical activities."
+    },
+    {
+        "id": 4,
+        "title": "Workout Duration",
+        "details": "Log the duration of your workouts to ensure you're meeting your fitness goals for each session."
+    },
+    {
+        "id": 5,
+        "title": "Heart Rate",
+        "details": "Monitor your heart rate during workouts to gauge the intensity and effectiveness of your exercises."
+    },
+    {
+        "id": 6,
+        "title": "Sleep Patterns",
+        "details": "Track your sleep patterns, including duration and quality, to ensure you're getting restful sleep for recovery."
+    }
+]

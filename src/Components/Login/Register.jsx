@@ -28,7 +28,8 @@ const Register = () => {
 
         const userInfo = {
             name,
-            email
+            email,
+            img
         }
 
         //     if (!/(?=.*?[A-Z])(?=.*?[#?!@$%^&*-]).{6,}/.test(password)) {

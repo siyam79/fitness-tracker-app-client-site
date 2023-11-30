@@ -21,6 +21,8 @@ const TrainerDetails = () => {
                         <img src={data.profileImage} className="lg:w-1/2 rounded-lg shadow-2xl" />
                         <div>
                             <div className="">
+                                <h1 className=" text-2xl mb-4 "> Trainer Skills  </h1>
+                               
                                 <ul>
                                     <li className="uppercase text-md font-bold ">{data.skills.skill1} </li>
                                     <h1 className="uppercase text-md font-bold ">{data.skills.skill2} </h1>
@@ -28,9 +30,13 @@ const TrainerDetails = () => {
                                     <h1 className="uppercase text-md font-bold ">{data.skills.skill4} </h1>
 
                                 </ul>
+                                <div className="divider"></div>
                             </div>
-                            <h1 className="text-xl font-bold mb-4"> {data.experience} </h1>
-
+                            <h1 className="text-xl font-bold mb-4"> Trainer Exprience </h1>
+                        
+                            <h1 className="text-md font-normal  mb-4"> {data.experience} </h1>
+                            <div className="divider"></div>
+                            <p className="text-xl mb-2 font-bold "> Booking Now Slot </p>
                             <div className=" flex-1 gap-10 ">
                                 {/* <p>{data.timeSlot.slot1} </p> */}
                                 <Link to={`/trainerboking/${data.timeSlot.slot1}/${data.trainerName}`}><button className="mr-6 ">{data.timeSlot.slot1}</button></Link>
