@@ -1,8 +1,28 @@
 
 
-## project Name ::  Fitness Track 
+## project Name ::  Fitness | Track 
 
-### Live Site ::  
+## uses tools 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# Client site uses tools
+### react.js
+### tailwind.css
+### firebase
+### jwt localstorage set token 
+### others nmp package 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+## Server site uses tools 
+
+#### node.js 
+#### express.js 
+#### mongodb 
+### script ( payment getway )
+
+
+
+
+### Live Site ::  https://fitness-tracker-97708.web.app/
 
 
 ### 1  A fitness is called Akar and there we provide fitness and he and the user are actually here we have different fitness related bugs we can book in different classes and we definitely don't have trade and we have multiple trainers and experienced trainers. By whom we provide all these services A new user on our website must log in to see the different types of jobs and the information in the setter must be logged in or be a user and we can provide different classes to him and he can choose his class.
