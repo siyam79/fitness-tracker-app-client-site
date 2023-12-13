@@ -23,6 +23,7 @@
 ### Live Site ::  https://fitness-tracker-97708.web.app/
 
 ## Unique Feature 1
+ script Uses for the (payment getway)
 #### In this project, the focal point revolves around administrative functionalities. The administrator has the capability to oversee and manage various aspects, including trainer bookings and payments. The system is designed to showcase pertinent information for both trainers and members. When a trainer logs in, the interface will prominently display details related to their booked sessions and received payments for the given year. On the other hand, for members, the system will present a summary of their attended sessions and any associated payments. Additionally, the admin possesses the flexibility to perform a wide range of tasks beyond the core functionalities, providing a comprehensive and dynamic administrative experience.
 
 
@@ -37,7 +38,7 @@
 
 
 
-
+........................................................................................................................................................................
 
 ### 1  A fitness is called Akar and there we provide fitness and he and the user are actually here we have different fitness related bugs we can book in different classes and we definitely don't have trade and we have multiple trainers and experienced trainers. By whom we provide all these services A new user on our website must log in to see the different types of jobs and the information in the setter must be logged in or be a user and we can provide different classes to him and he can choose his class.
 
